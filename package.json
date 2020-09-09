@@ -6,7 +6,25 @@
   "scripts": {
     "build": "next build",
     "dev": "nodemon index.js",
-    "deploy": "npm run build && NODE_ENV=production node index.js"
+    "deploy": "npm run build && NODE_ENV=production node index.js",
+    "eslint-check": "eslint --print-config path/to/main.js | eslint-config-prettier-check",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
+    "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint && yarn run format && yarn eslint-check"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "body-parser": "^1.19.0",
