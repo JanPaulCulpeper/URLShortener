@@ -1,30 +1,54 @@
-import React from "react";
+import React from 'react';
 
-// Not obligated but important to type check
-// We want to make sure our app doesn't break
+import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
+import { Provider } from 'react-redux';
+import { createWrapper } from 'next-redux-wrapper';
 
-import PropTypes from "prop-types";
+import store from '../services/redux';
 
-// This is the default page manager in nextjs
-// Component is the current page running
-// pageProps is the current paramters
-// props are values that we pass down to components
-/* e.g.
+import 'typeface-roboto';
 
-component: MyApp
-MyApp props:
+const theme = {};
 
+const Child = ({ Component, pageProps }) => {
+  React.useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles && jssStyles.parentNode)
+      jssStyles.parentNode.removeChild(jssStyles);
+  }, []);
 
-*/
-
-const MyApp = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  );
 };
 
-// Requiring the expected type for incoming props (paramters)
-MyApp.propTypes = {
+const App = (props) => {
+  return (
+    <>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <div>
+            <Child {...props} />
+          </div>
+        </ThemeProvider>
+      </Provider>
+    </>
+  );
+};
+
+Child.defaultProps = {
+  pageProps: {}
+};
+
+Child.propTypes = {
   Component: PropTypes.instanceOf(Object).isRequired,
-  pageProps: PropTypes.instanceOf(Object).isRequired,
+  pageProps: PropTypes.instanceOf(Object)
 };
 
-export default MyApp;
+const makestore = () => store;
+const wrapper = createWrapper(makestore);
+
+export default wrapper.withRedux(App);

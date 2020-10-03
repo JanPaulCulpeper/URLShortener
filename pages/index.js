@@ -2,7 +2,7 @@
 We import React if we are going to write jsx (html react language),
 not necessary in nextjs but it is good practice.
 */
-import React from "react";
+import React from 'react';
 
 // we create an lambda function that returns either some text or JSX
 // NOTE: This is function-based react programming
