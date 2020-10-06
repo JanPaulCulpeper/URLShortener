@@ -4,9 +4,7 @@ import reduxThunkMiddleware from 'redux-thunk';
 
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 
-// import reducers from "../store/reducers";
-
-const reducers = () => {};
+import reducers from '../store/reducers';
 
 const store = createStore(
   reducers,

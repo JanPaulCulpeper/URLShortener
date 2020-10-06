@@ -4,7 +4,9 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const next = require('next');
 const dotenv = require('dotenv');
+const cookieParser = require('cookie-parser');
 const connectDB = require('./services/db');
+const authRoutes = require('./routes/auth');
 /*
  we check nodejs' environmental
  variable to see wether
@@ -53,6 +55,10 @@ app.prepare().then(() => {
   server.use(bodyparser.urlencoded({ extended: false }));
   // json data
   server.use(bodyparser.json({ limit: '50mb' }));
+  server.use(cookieParser());
+
+  // api route handling
+  server.use('/api/auth', authRoutes);
 
   // We let nextjs handle all incoming requests the "*" is regex for "all"
   server.get('*', (req, res) => handle(req, res));
