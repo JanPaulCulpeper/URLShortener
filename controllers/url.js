@@ -10,10 +10,14 @@ const addUrl = () => {
 const deleteUrloutofuse = () => {
   return null;
 };
+const getShorturl = () => {
+  return null;
+};
 
 module.exports = {
   deleteUrl,
-  createShorturl,
   addUrl,
-  deleteUrloutofuse
+  createShorturl,
+  deleteUrloutofuse,
+  getShorturl
 };
