@@ -1,1 +1,17 @@
-{"ast":null,"code":"// import React from 'react';\nvar subExample = function subExample() {\n  return 'THis is a subpage';\n};\n\nexport default subExample;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/example/[id].js"],"names":["subExample"],"mappings":"AAAA;AAEA,IAAMA,UAAU,GAAG,SAAbA,UAAa,GAAM;AACvB,SAAO,mBAAP;AACD,CAFD;;AAIA,eAAeA,UAAf","sourcesContent":["// import React from 'react';\n\nconst subExample = () => {\n  return 'THis is a subpage';\n};\n\nexport default subExample;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "// import React from 'react';\nvar subExample = function subExample() {\n  return 'THis is a subpage';\n};\n\nexport default subExample;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/example/[id].js"
+    ],
+    "names": ["subExample"],
+    "mappings": "AAAA;AAEA,IAAMA,UAAU,GAAG,SAAbA,UAAa,GAAM;AACvB,SAAO,mBAAP;AACD,CAFD;;AAIA,eAAeA,UAAf",
+    "sourcesContent": [
+      "// import React from 'react';\n\nconst subExample = () => {\n  return 'THis is a subpage';\n};\n\nexport default subExample;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -1,1 +1,31 @@
-{"ast":null,"code":"var __jsx = React.createElement;\n\n/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\nimport React from 'react';\nimport { useSelector, useDispatch } from 'react-redux';\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions'; // we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\n\nconst Home = () => {\n  const dispatch = useDispatch();\n\n  const init = () => {\n    dispatch(authActions.signup('blah', 'blah'));\n  };\n\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  console.log(authToken);\n  return __jsx(\"div\", null, authToken);\n}; // We need to export our component to make it accesible elswhere\n\n\nexport default Home;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/index.js"],"names":["React","useSelector","useDispatch","authSelectors","authActions","Home","dispatch","init","signup","authToken","selectAuthToken","console","log"],"mappings":";;AAAA;;;;AAIA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,SAASC,WAAT,EAAsBC,WAAtB,QAAyC,aAAzC;AAEA,SAASC,aAAT,QAA8B,oBAA9B;AACA,SAASC,WAAT,QAA4B,kBAA5B,C,CAEA;AACA;;AACA,MAAMC,IAAI,GAAG,MAAM;AACjB,QAAMC,QAAQ,GAAGJ,WAAW,EAA5B;;AAEA,QAAMK,IAAI,GAAG,MAAM;AACjBD,IAAAA,QAAQ,CAACF,WAAW,CAACI,MAAZ,CAAmB,MAAnB,EAA2B,MAA3B,CAAD,CAAR;AACD,GAFD;;AAIA,QAAMC,SAAS,GAAGR,WAAW,CAACE,aAAa,CAACO,eAAf,CAA7B;AACAC,EAAAA,OAAO,CAACC,GAAR,CAAYH,SAAZ;AAEA,SAAO,mBAAMA,SAAN,CAAP;AACD,CAXD,C,CAaA;;;AACA,eAAeJ,IAAf","sourcesContent":["/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\nimport React from 'react';\n\nimport { useSelector, useDispatch } from 'react-redux';\n\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions';\n\n// we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\nconst Home = () => {\n  const dispatch = useDispatch();\n\n  const init = () => {\n    dispatch(authActions.signup('blah', 'blah'));\n  };\n\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  console.log(authToken);\n\n  return <div>{authToken}</div>;\n};\n\n// We need to export our component to make it accesible elswhere\nexport default Home;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\n\n/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\nimport React from 'react';\nimport { useSelector, useDispatch } from 'react-redux';\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions'; // we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\n\nconst Home = () => {\n  const dispatch = useDispatch();\n\n  const init = () => {\n    dispatch(authActions.signup('blah', 'blah'));\n  };\n\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  console.log(authToken);\n  return __jsx(\"div\", null, authToken);\n}; // We need to export our component to make it accesible elswhere\n\n\nexport default Home;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/index.js"
+    ],
+    "names": [
+      "React",
+      "useSelector",
+      "useDispatch",
+      "authSelectors",
+      "authActions",
+      "Home",
+      "dispatch",
+      "init",
+      "signup",
+      "authToken",
+      "selectAuthToken",
+      "console",
+      "log"
+    ],
+    "mappings": ";;AAAA;;;;AAIA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,SAASC,WAAT,EAAsBC,WAAtB,QAAyC,aAAzC;AAEA,SAASC,aAAT,QAA8B,oBAA9B;AACA,SAASC,WAAT,QAA4B,kBAA5B,C,CAEA;AACA;;AACA,MAAMC,IAAI,GAAG,MAAM;AACjB,QAAMC,QAAQ,GAAGJ,WAAW,EAA5B;;AAEA,QAAMK,IAAI,GAAG,MAAM;AACjBD,IAAAA,QAAQ,CAACF,WAAW,CAACI,MAAZ,CAAmB,MAAnB,EAA2B,MAA3B,CAAD,CAAR;AACD,GAFD;;AAIA,QAAMC,SAAS,GAAGR,WAAW,CAACE,aAAa,CAACO,eAAf,CAA7B;AACAC,EAAAA,OAAO,CAACC,GAAR,CAAYH,SAAZ;AAEA,SAAO,mBAAMA,SAAN,CAAP;AACD,CAXD,C,CAaA;;;AACA,eAAeJ,IAAf",
+    "sourcesContent": [
+      "/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\nimport React from 'react';\n\nimport { useSelector, useDispatch } from 'react-redux';\n\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions';\n\n// we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\nconst Home = () => {\n  const dispatch = useDispatch();\n\n  const init = () => {\n    dispatch(authActions.signup('blah', 'blah'));\n  };\n\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  console.log(authToken);\n\n  return <div>{authToken}</div>;\n};\n\n// We need to export our component to make it accesible elswhere\nexport default Home;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

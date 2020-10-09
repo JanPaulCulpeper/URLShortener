@@ -1,1 +1,17 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport { Button } from '@material-ui/core';\nimport Link from 'next/link';\n/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\n// we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\n\nconst Home = () => {\n  return __jsx(Link, {\n    href: \"/login\"\n  }, __jsx(Button, {\n    variant: \"contained\",\n    color: \"primary\"\n  }, \"Go to login\"));\n}; // We need to export our component to make it accesible elswhere\n\n\nexport default Home;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/index.js"],"names":["React","Button","Link","Home"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,MAAT,QAAuB,mBAAvB;AACA,OAAOC,IAAP,MAAiB,WAAjB;AAEA;;;;AAKA;AACA;;AACA,MAAMC,IAAI,GAAG,MAAM;AACjB,SACE,MAAC,IAAD;AAAM,IAAA,IAAI,EAAC;AAAX,KACE,MAAC,MAAD;AAAQ,IAAA,OAAO,EAAC,WAAhB;AAA4B,IAAA,KAAK,EAAC;AAAlC,mBADF,CADF;AAOD,CARD,C,CAUA;;;AACA,eAAeA,IAAf","sourcesContent":["import React from 'react';\nimport { Button } from '@material-ui/core';\nimport Link from 'next/link';\n\n/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\n\n// we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\nconst Home = () => {\n  return (\n    <Link href=\"/login\">\n      <Button variant=\"contained\" color=\"primary\">\n        Go to login\n      </Button>\n    </Link>\n  );\n};\n\n// We need to export our component to make it accesible elswhere\nexport default Home;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\nimport { Button } from '@material-ui/core';\nimport Link from 'next/link';\n/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\n// we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\n\nconst Home = () => {\n  return __jsx(Link, {\n    href: \"/login\"\n  }, __jsx(Button, {\n    variant: \"contained\",\n    color: \"primary\"\n  }, \"Go to login\"));\n}; // We need to export our component to make it accesible elswhere\n\n\nexport default Home;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/index.js"
+    ],
+    "names": ["React", "Button", "Link", "Home"],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,MAAT,QAAuB,mBAAvB;AACA,OAAOC,IAAP,MAAiB,WAAjB;AAEA;;;;AAKA;AACA;;AACA,MAAMC,IAAI,GAAG,MAAM;AACjB,SACE,MAAC,IAAD;AAAM,IAAA,IAAI,EAAC;AAAX,KACE,MAAC,MAAD;AAAQ,IAAA,OAAO,EAAC,WAAhB;AAA4B,IAAA,KAAK,EAAC;AAAlC,mBADF,CADF;AAOD,CARD,C,CAUA;;;AACA,eAAeA,IAAf",
+    "sourcesContent": [
+      "import React from 'react';\nimport { Button } from '@material-ui/core';\nimport Link from 'next/link';\n\n/*\nWe import React if we are going to write jsx (html react language),\nnot necessary in nextjs but it is good practice.\n*/\n\n// we create an lambda function that returns either some text or JSX\n// NOTE: This is function-based react programming\nconst Home = () => {\n  return (\n    <Link href=\"/login\">\n      <Button variant=\"contained\" color=\"primary\">\n        Go to login\n      </Button>\n    </Link>\n  );\n};\n\n// We need to export our component to make it accesible elswhere\nexport default Home;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

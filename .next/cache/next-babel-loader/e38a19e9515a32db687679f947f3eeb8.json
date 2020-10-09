@@ -1,1 +1,17 @@
-{"ast":null,"code":"export var SIGNIN = 'SIGNIN';\nexport var AUTH_ACTION_FAILED = 'USER_ACTION_FAILED';","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/store/actions/types/auth.js"],"names":["SIGNIN","AUTH_ACTION_FAILED"],"mappings":"AAAA,OAAO,IAAMA,MAAM,GAAG,QAAf;AACP,OAAO,IAAMC,kBAAkB,GAAG,oBAA3B","sourcesContent":["export const SIGNIN = 'SIGNIN';\nexport const AUTH_ACTION_FAILED = 'USER_ACTION_FAILED';\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export var SIGNIN = 'SIGNIN';\nexport var AUTH_ACTION_FAILED = 'USER_ACTION_FAILED';",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/store/actions/types/auth.js"
+    ],
+    "names": ["SIGNIN", "AUTH_ACTION_FAILED"],
+    "mappings": "AAAA,OAAO,IAAMA,MAAM,GAAG,QAAf;AACP,OAAO,IAAMC,kBAAkB,GAAG,oBAA3B",
+    "sourcesContent": [
+      "export const SIGNIN = 'SIGNIN';\nexport const AUTH_ACTION_FAILED = 'USER_ACTION_FAILED';\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

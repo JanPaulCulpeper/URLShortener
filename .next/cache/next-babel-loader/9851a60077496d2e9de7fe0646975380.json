@@ -1,1 +1,17 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\n\nconst example = () => {\n  return __jsx(\"div\", null, \"This is an example \");\n};\n\nexport default example;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/example.js"],"names":["React","example"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAEA,MAAMC,OAAO,GAAG,MAAM;AACpB,SAAO,yCAAP;AACD,CAFD;;AAIA,eAAeA,OAAf","sourcesContent":["import React from 'react';\n\nconst example = () => {\n  return <div>This is an example </div>;\n};\n\nexport default example;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\n\nconst example = () => {\n  return __jsx(\"div\", null, \"This is an example \");\n};\n\nexport default example;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/example.js"
+    ],
+    "names": ["React", "example"],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAEA,MAAMC,OAAO,GAAG,MAAM;AACpB,SAAO,yCAAP;AACD,CAFD;;AAIA,eAAeA,OAAf",
+    "sourcesContent": [
+      "import React from 'react';\n\nconst example = () => {\n  return <div>This is an example </div>;\n};\n\nexport default example;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
