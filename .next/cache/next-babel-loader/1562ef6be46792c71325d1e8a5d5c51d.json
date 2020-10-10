@@ -1,1 +1,31 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport { useSelector } from 'react-redux';\nimport { Avatar } from '@material-ui/core';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\n\nconst Home = () => {\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"URL-shortener\",\n    Links: [{\n      title: 'Login',\n      ref: '/login',\n      condition: !!authToken,\n      replacement: __jsx(Avatar, null, authToken.userName)\n    }]\n  }));\n};\n\nexport default Home;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/index.js"],"names":["React","useSelector","Avatar","Navigation","authSelectors","Home","authToken","selectAuthToken","title","ref","condition","replacement","userName"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,WAAT,QAA4B,aAA5B;AACA,SAASC,MAAT,QAAuB,mBAAvB;AACA,OAAOC,UAAP,MAAuB,0BAAvB;AACA,SAASC,aAAT,QAA8B,oBAA9B;;AAEA,MAAMC,IAAI,GAAG,MAAM;AACjB,QAAMC,SAAS,GAAGL,WAAW,CAACG,aAAa,CAACG,eAAf,CAA7B;AACA,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,eADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEC,MAAAA,KAAK,EAAE,OADT;AAEEC,MAAAA,GAAG,EAAE,QAFP;AAGEC,MAAAA,SAAS,EAAE,CAAC,CAACJ,SAHf;AAIEK,MAAAA,WAAW,EAAE,MAAC,MAAD,QAASL,SAAS,CAACM,QAAnB;AAJf,KADK;AAFT,IADF,CADF;AAeD,CAjBD;;AAmBA,eAAeP,IAAf","sourcesContent":["import React from 'react';\nimport { useSelector } from 'react-redux';\nimport { Avatar } from '@material-ui/core';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\n\nconst Home = () => {\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  return (\n    <>\n      <Navigation\n        Title=\"URL-shortener\"\n        Links={[\n          {\n            title: 'Login',\n            ref: '/login',\n            condition: !!authToken,\n            replacement: <Avatar>{authToken.userName}</Avatar>\n          }\n        ]}\n      />\n    </>\n  );\n};\n\nexport default Home;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\nimport { useSelector } from 'react-redux';\nimport { Avatar } from '@material-ui/core';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\n\nconst Home = () => {\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"URL-shortener\",\n    Links: [{\n      title: 'Login',\n      ref: '/login',\n      condition: !!authToken,\n      replacement: __jsx(Avatar, null, authToken.userName)\n    }]\n  }));\n};\n\nexport default Home;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/index.js"
+    ],
+    "names": [
+      "React",
+      "useSelector",
+      "Avatar",
+      "Navigation",
+      "authSelectors",
+      "Home",
+      "authToken",
+      "selectAuthToken",
+      "title",
+      "ref",
+      "condition",
+      "replacement",
+      "userName"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,WAAT,QAA4B,aAA5B;AACA,SAASC,MAAT,QAAuB,mBAAvB;AACA,OAAOC,UAAP,MAAuB,0BAAvB;AACA,SAASC,aAAT,QAA8B,oBAA9B;;AAEA,MAAMC,IAAI,GAAG,MAAM;AACjB,QAAMC,SAAS,GAAGL,WAAW,CAACG,aAAa,CAACG,eAAf,CAA7B;AACA,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,eADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEC,MAAAA,KAAK,EAAE,OADT;AAEEC,MAAAA,GAAG,EAAE,QAFP;AAGEC,MAAAA,SAAS,EAAE,CAAC,CAACJ,SAHf;AAIEK,MAAAA,WAAW,EAAE,MAAC,MAAD,QAASL,SAAS,CAACM,QAAnB;AAJf,KADK;AAFT,IADF,CADF;AAeD,CAjBD;;AAmBA,eAAeP,IAAf",
+    "sourcesContent": [
+      "import React from 'react';\nimport { useSelector } from 'react-redux';\nimport { Avatar } from '@material-ui/core';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\n\nconst Home = () => {\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  return (\n    <>\n      <Navigation\n        Title=\"URL-shortener\"\n        Links={[\n          {\n            title: 'Login',\n            ref: '/login',\n            condition: !!authToken,\n            replacement: <Avatar>{authToken.userName}</Avatar>\n          }\n        ]}\n      />\n    </>\n  );\n};\n\nexport default Home;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

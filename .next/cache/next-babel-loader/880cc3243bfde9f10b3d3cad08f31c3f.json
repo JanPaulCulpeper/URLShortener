@@ -1,1 +1,42 @@
-{"ast":null,"code":"var _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React from 'react';\nimport AppBar from '@material-ui/core/AppBar';\nimport Toolbar from '@material-ui/core/Toolbar';\nimport Typography from '@material-ui/core/Typography';\nimport Button from '@material-ui/core/Button';\nimport PropTypes from 'prop-types';\nimport Link from 'next/link';\nimport useStyles from './style';\n\nvar Navigation = function Navigation(_ref) {\n  _s();\n\n  var Links = _ref.Links,\n      Title = _ref.Title;\n  var classes = useStyles();\n  return __jsx(\"div\", {\n    className: classes.root\n  }, __jsx(AppBar, {\n    position: \"static\"\n  }, __jsx(Toolbar, null, __jsx(Typography, {\n    variant: \"h6\",\n    className: classes.title\n  }, Title), Links.map(function (link) {\n    if (link.condition) {\n      return link.replacement;\n    }\n\n    return __jsx(Link, {\n      href: link.ref\n    }, __jsx(Button, {\n      color: \"inherit\"\n    }, link.title));\n  }))));\n};\n\n_s(Navigation, \"8g5FPXexvSEOsxdmU7HicukHGqY=\", false, function () {\n  return [useStyles];\n});\n\n_c = Navigation;\nNavigation.propTypes = {\n  Links: PropTypes.arrayOf(String),\n  Title: PropTypes.string\n};\nNavigation.defaultProps = {\n  Links: [],\n  Title: 'example'\n};\nexport default Navigation;\n\nvar _c;\n\n$RefreshReg$(_c, \"Navigation\");","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/components/Navigation/index.js"],"names":["React","AppBar","Toolbar","Typography","Button","PropTypes","Link","useStyles","Navigation","Links","Title","classes","root","title","map","link","condition","replacement","ref","propTypes","arrayOf","String","string","defaultProps"],"mappings":";;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,OAAOC,MAAP,MAAmB,0BAAnB;AACA,OAAOC,OAAP,MAAoB,2BAApB;AACA,OAAOC,UAAP,MAAuB,8BAAvB;AACA,OAAOC,MAAP,MAAmB,0BAAnB;AAEA,OAAOC,SAAP,MAAsB,YAAtB;AACA,OAAOC,IAAP,MAAiB,WAAjB;AACA,OAAOC,SAAP,MAAsB,SAAtB;;AAEA,IAAMC,UAAU,GAAG,SAAbA,UAAa,OAAsB;AAAA;;AAAA,MAAnBC,KAAmB,QAAnBA,KAAmB;AAAA,MAAZC,KAAY,QAAZA,KAAY;AACvC,MAAMC,OAAO,GAAGJ,SAAS,EAAzB;AAEA,SACE;AAAK,IAAA,SAAS,EAAEI,OAAO,CAACC;AAAxB,KACE,MAAC,MAAD;AAAQ,IAAA,QAAQ,EAAC;AAAjB,KACE,MAAC,OAAD,QACE,MAAC,UAAD;AAAY,IAAA,OAAO,EAAC,IAApB;AAAyB,IAAA,SAAS,EAAED,OAAO,CAACE;AAA5C,KACGH,KADH,CADF,EAIGD,KAAK,CAACK,GAAN,CAAU,UAACC,IAAD,EAAU;AACnB,QAAIA,IAAI,CAACC,SAAT,EAAoB;AAClB,aAAOD,IAAI,CAACE,WAAZ;AACD;;AACD,WACE,MAAC,IAAD;AAAM,MAAA,IAAI,EAAEF,IAAI,CAACG;AAAjB,OACE,MAAC,MAAD;AAAQ,MAAA,KAAK,EAAC;AAAd,OAAyBH,IAAI,CAACF,KAA9B,CADF,CADF;AAKD,GATA,CAJH,CADF,CADF,CADF;AAqBD,CAxBD;;GAAML,U;UACYD,S;;;KADZC,U;AA0BNA,UAAU,CAACW,SAAX,GAAuB;AACrBV,EAAAA,KAAK,EAAEJ,SAAS,CAACe,OAAV,CAAkBC,MAAlB,CADc;AAErBX,EAAAA,KAAK,EAAEL,SAAS,CAACiB;AAFI,CAAvB;AAKAd,UAAU,CAACe,YAAX,GAA0B;AACxBd,EAAAA,KAAK,EAAE,EADiB;AAExBC,EAAAA,KAAK,EAAE;AAFiB,CAA1B;AAIA,eAAeF,UAAf","sourcesContent":["import React from 'react';\n\nimport AppBar from '@material-ui/core/AppBar';\nimport Toolbar from '@material-ui/core/Toolbar';\nimport Typography from '@material-ui/core/Typography';\nimport Button from '@material-ui/core/Button';\n\nimport PropTypes from 'prop-types';\nimport Link from 'next/link';\nimport useStyles from './style';\n\nconst Navigation = ({ Links, Title }) => {\n  const classes = useStyles();\n\n  return (\n    <div className={classes.root}>\n      <AppBar position=\"static\">\n        <Toolbar>\n          <Typography variant=\"h6\" className={classes.title}>\n            {Title}\n          </Typography>\n          {Links.map((link) => {\n            if (link.condition) {\n              return link.replacement;\n            }\n            return (\n              <Link href={link.ref}>\n                <Button color=\"inherit\">{link.title}</Button>\n              </Link>\n            );\n          })}\n        </Toolbar>\n      </AppBar>\n    </div>\n  );\n};\n\nNavigation.propTypes = {\n  Links: PropTypes.arrayOf(String),\n  Title: PropTypes.string\n};\n\nNavigation.defaultProps = {\n  Links: [],\n  Title: 'example'\n};\nexport default Navigation;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React from 'react';\nimport AppBar from '@material-ui/core/AppBar';\nimport Toolbar from '@material-ui/core/Toolbar';\nimport Typography from '@material-ui/core/Typography';\nimport Button from '@material-ui/core/Button';\nimport PropTypes from 'prop-types';\nimport Link from 'next/link';\nimport useStyles from './style';\n\nvar Navigation = function Navigation(_ref) {\n  _s();\n\n  var Links = _ref.Links,\n      Title = _ref.Title;\n  var classes = useStyles();\n  return __jsx(\"div\", {\n    className: classes.root\n  }, __jsx(AppBar, {\n    position: \"static\"\n  }, __jsx(Toolbar, null, __jsx(Typography, {\n    variant: \"h6\",\n    className: classes.title\n  }, Title), Links.map(function (link) {\n    if (link.condition) {\n      return link.replacement;\n    }\n\n    return __jsx(Link, {\n      href: link.ref\n    }, __jsx(Button, {\n      color: \"inherit\"\n    }, link.title));\n  }))));\n};\n\n_s(Navigation, \"8g5FPXexvSEOsxdmU7HicukHGqY=\", false, function () {\n  return [useStyles];\n});\n\n_c = Navigation;\nNavigation.propTypes = {\n  Links: PropTypes.arrayOf(String),\n  Title: PropTypes.string\n};\nNavigation.defaultProps = {\n  Links: [],\n  Title: 'example'\n};\nexport default Navigation;\n\nvar _c;\n\n$RefreshReg$(_c, \"Navigation\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/components/Navigation/index.js"
+    ],
+    "names": [
+      "React",
+      "AppBar",
+      "Toolbar",
+      "Typography",
+      "Button",
+      "PropTypes",
+      "Link",
+      "useStyles",
+      "Navigation",
+      "Links",
+      "Title",
+      "classes",
+      "root",
+      "title",
+      "map",
+      "link",
+      "condition",
+      "replacement",
+      "ref",
+      "propTypes",
+      "arrayOf",
+      "String",
+      "string",
+      "defaultProps"
+    ],
+    "mappings": ";;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,OAAOC,MAAP,MAAmB,0BAAnB;AACA,OAAOC,OAAP,MAAoB,2BAApB;AACA,OAAOC,UAAP,MAAuB,8BAAvB;AACA,OAAOC,MAAP,MAAmB,0BAAnB;AAEA,OAAOC,SAAP,MAAsB,YAAtB;AACA,OAAOC,IAAP,MAAiB,WAAjB;AACA,OAAOC,SAAP,MAAsB,SAAtB;;AAEA,IAAMC,UAAU,GAAG,SAAbA,UAAa,OAAsB;AAAA;;AAAA,MAAnBC,KAAmB,QAAnBA,KAAmB;AAAA,MAAZC,KAAY,QAAZA,KAAY;AACvC,MAAMC,OAAO,GAAGJ,SAAS,EAAzB;AAEA,SACE;AAAK,IAAA,SAAS,EAAEI,OAAO,CAACC;AAAxB,KACE,MAAC,MAAD;AAAQ,IAAA,QAAQ,EAAC;AAAjB,KACE,MAAC,OAAD,QACE,MAAC,UAAD;AAAY,IAAA,OAAO,EAAC,IAApB;AAAyB,IAAA,SAAS,EAAED,OAAO,CAACE;AAA5C,KACGH,KADH,CADF,EAIGD,KAAK,CAACK,GAAN,CAAU,UAACC,IAAD,EAAU;AACnB,QAAIA,IAAI,CAACC,SAAT,EAAoB;AAClB,aAAOD,IAAI,CAACE,WAAZ;AACD;;AACD,WACE,MAAC,IAAD;AAAM,MAAA,IAAI,EAAEF,IAAI,CAACG;AAAjB,OACE,MAAC,MAAD;AAAQ,MAAA,KAAK,EAAC;AAAd,OAAyBH,IAAI,CAACF,KAA9B,CADF,CADF;AAKD,GATA,CAJH,CADF,CADF,CADF;AAqBD,CAxBD;;GAAML,U;UACYD,S;;;KADZC,U;AA0BNA,UAAU,CAACW,SAAX,GAAuB;AACrBV,EAAAA,KAAK,EAAEJ,SAAS,CAACe,OAAV,CAAkBC,MAAlB,CADc;AAErBX,EAAAA,KAAK,EAAEL,SAAS,CAACiB;AAFI,CAAvB;AAKAd,UAAU,CAACe,YAAX,GAA0B;AACxBd,EAAAA,KAAK,EAAE,EADiB;AAExBC,EAAAA,KAAK,EAAE;AAFiB,CAA1B;AAIA,eAAeF,UAAf",
+    "sourcesContent": [
+      "import React from 'react';\n\nimport AppBar from '@material-ui/core/AppBar';\nimport Toolbar from '@material-ui/core/Toolbar';\nimport Typography from '@material-ui/core/Typography';\nimport Button from '@material-ui/core/Button';\n\nimport PropTypes from 'prop-types';\nimport Link from 'next/link';\nimport useStyles from './style';\n\nconst Navigation = ({ Links, Title }) => {\n  const classes = useStyles();\n\n  return (\n    <div className={classes.root}>\n      <AppBar position=\"static\">\n        <Toolbar>\n          <Typography variant=\"h6\" className={classes.title}>\n            {Title}\n          </Typography>\n          {Links.map((link) => {\n            if (link.condition) {\n              return link.replacement;\n            }\n            return (\n              <Link href={link.ref}>\n                <Button color=\"inherit\">{link.title}</Button>\n              </Link>\n            );\n          })}\n        </Toolbar>\n      </AppBar>\n    </div>\n  );\n};\n\nNavigation.propTypes = {\n  Links: PropTypes.arrayOf(String),\n  Title: PropTypes.string\n};\n\nNavigation.defaultProps = {\n  Links: [],\n  Title: 'example'\n};\nexport default Navigation;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

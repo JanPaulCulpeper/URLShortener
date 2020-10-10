@@ -1,1 +1,39 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport { useDispatch, useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport Form from '../components/Form';\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions';\n\nconst Login = () => {\n  const dispatch = useDispatch();\n  const [values, setValues] = React.useState({});\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  const handleSubmit = React.useCallback(() => {\n    dispatch(authActions.login(values));\n  }, []);\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"Login\",\n    Links: [{\n      title: 'Home',\n      ref: '/'\n    }]\n  }), __jsx(Form, {\n    Title: \"Account\",\n    ParentState: [values, setValues],\n    submitFunction: handleSubmit,\n    Inputs: [{\n      label: 'Email',\n      id: 'email'\n    }, {\n      label: 'Password',\n      id: 'password'\n    }]\n  }));\n};\n\nexport default Login;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/login.js"],"names":["React","useDispatch","useSelector","Navigation","Form","authSelectors","authActions","Login","dispatch","values","setValues","useState","authToken","selectAuthToken","handleSubmit","useCallback","login","title","ref","label","id"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,WAAT,EAAsBC,WAAtB,QAAyC,aAAzC;AACA,OAAOC,UAAP,MAAuB,0BAAvB;AACA,OAAOC,IAAP,MAAiB,oBAAjB;AACA,SAASC,aAAT,QAA8B,oBAA9B;AACA,SAASC,WAAT,QAA4B,kBAA5B;;AAEA,MAAMC,KAAK,GAAG,MAAM;AAClB,QAAMC,QAAQ,GAAGP,WAAW,EAA5B;AACA,QAAM,CAACQ,MAAD,EAASC,SAAT,IAAsBV,KAAK,CAACW,QAAN,CAAe,EAAf,CAA5B;AACA,QAAMC,SAAS,GAAGV,WAAW,CAACG,aAAa,CAACQ,eAAf,CAA7B;AACA,QAAMC,YAAY,GAAGd,KAAK,CAACe,WAAN,CAAkB,MAAM;AAC3CP,IAAAA,QAAQ,CAACF,WAAW,CAACU,KAAZ,CAAkBP,MAAlB,CAAD,CAAR;AACD,GAFoB,EAElB,EAFkB,CAArB;AAIA,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,OADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEQ,MAAAA,KAAK,EAAE,MADT;AAEEC,MAAAA,GAAG,EAAE;AAFP,KADK;AAFT,IADF,EAWE,MAAC,IAAD;AACE,IAAA,KAAK,EAAC,SADR;AAEE,IAAA,WAAW,EAAE,CAACT,MAAD,EAASC,SAAT,CAFf;AAGE,IAAA,cAAc,EAAEI,YAHlB;AAIE,IAAA,MAAM,EAAE,CACN;AAAEK,MAAAA,KAAK,EAAE,OAAT;AAAkBC,MAAAA,EAAE,EAAE;AAAtB,KADM,EAEN;AAAED,MAAAA,KAAK,EAAE,UAAT;AAAqBC,MAAAA,EAAE,EAAE;AAAzB,KAFM;AAJV,IAXF,CADF;AAuBD,CA/BD;;AAiCA,eAAeb,KAAf","sourcesContent":["import React from 'react';\nimport { useDispatch, useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport Form from '../components/Form';\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions';\n\nconst Login = () => {\n  const dispatch = useDispatch();\n  const [values, setValues] = React.useState({});\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  const handleSubmit = React.useCallback(() => {\n    dispatch(authActions.login(values));\n  }, []);\n\n  return (\n    <>\n      <Navigation\n        Title=\"Login\"\n        Links={[\n          {\n            title: 'Home',\n            ref: '/'\n          }\n        ]}\n      />\n\n      <Form\n        Title=\"Account\"\n        ParentState={[values, setValues]}\n        submitFunction={handleSubmit}\n        Inputs={[\n          { label: 'Email', id: 'email' },\n          { label: 'Password', id: 'password' }\n        ]}\n      />\n    </>\n  );\n};\n\nexport default Login;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\nimport { useDispatch, useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport Form from '../components/Form';\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions';\n\nconst Login = () => {\n  const dispatch = useDispatch();\n  const [values, setValues] = React.useState({});\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  const handleSubmit = React.useCallback(() => {\n    dispatch(authActions.login(values));\n  }, []);\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"Login\",\n    Links: [{\n      title: 'Home',\n      ref: '/'\n    }]\n  }), __jsx(Form, {\n    Title: \"Account\",\n    ParentState: [values, setValues],\n    submitFunction: handleSubmit,\n    Inputs: [{\n      label: 'Email',\n      id: 'email'\n    }, {\n      label: 'Password',\n      id: 'password'\n    }]\n  }));\n};\n\nexport default Login;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/login.js"
+    ],
+    "names": [
+      "React",
+      "useDispatch",
+      "useSelector",
+      "Navigation",
+      "Form",
+      "authSelectors",
+      "authActions",
+      "Login",
+      "dispatch",
+      "values",
+      "setValues",
+      "useState",
+      "authToken",
+      "selectAuthToken",
+      "handleSubmit",
+      "useCallback",
+      "login",
+      "title",
+      "ref",
+      "label",
+      "id"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,WAAT,EAAsBC,WAAtB,QAAyC,aAAzC;AACA,OAAOC,UAAP,MAAuB,0BAAvB;AACA,OAAOC,IAAP,MAAiB,oBAAjB;AACA,SAASC,aAAT,QAA8B,oBAA9B;AACA,SAASC,WAAT,QAA4B,kBAA5B;;AAEA,MAAMC,KAAK,GAAG,MAAM;AAClB,QAAMC,QAAQ,GAAGP,WAAW,EAA5B;AACA,QAAM,CAACQ,MAAD,EAASC,SAAT,IAAsBV,KAAK,CAACW,QAAN,CAAe,EAAf,CAA5B;AACA,QAAMC,SAAS,GAAGV,WAAW,CAACG,aAAa,CAACQ,eAAf,CAA7B;AACA,QAAMC,YAAY,GAAGd,KAAK,CAACe,WAAN,CAAkB,MAAM;AAC3CP,IAAAA,QAAQ,CAACF,WAAW,CAACU,KAAZ,CAAkBP,MAAlB,CAAD,CAAR;AACD,GAFoB,EAElB,EAFkB,CAArB;AAIA,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,OADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEQ,MAAAA,KAAK,EAAE,MADT;AAEEC,MAAAA,GAAG,EAAE;AAFP,KADK;AAFT,IADF,EAWE,MAAC,IAAD;AACE,IAAA,KAAK,EAAC,SADR;AAEE,IAAA,WAAW,EAAE,CAACT,MAAD,EAASC,SAAT,CAFf;AAGE,IAAA,cAAc,EAAEI,YAHlB;AAIE,IAAA,MAAM,EAAE,CACN;AAAEK,MAAAA,KAAK,EAAE,OAAT;AAAkBC,MAAAA,EAAE,EAAE;AAAtB,KADM,EAEN;AAAED,MAAAA,KAAK,EAAE,UAAT;AAAqBC,MAAAA,EAAE,EAAE;AAAzB,KAFM;AAJV,IAXF,CADF;AAuBD,CA/BD;;AAiCA,eAAeb,KAAf",
+    "sourcesContent": [
+      "import React from 'react';\nimport { useDispatch, useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport Form from '../components/Form';\nimport { authSelectors } from '../store/selectors';\nimport { authActions } from '../store/actions';\n\nconst Login = () => {\n  const dispatch = useDispatch();\n  const [values, setValues] = React.useState({});\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  const handleSubmit = React.useCallback(() => {\n    dispatch(authActions.login(values));\n  }, []);\n\n  return (\n    <>\n      <Navigation\n        Title=\"Login\"\n        Links={[\n          {\n            title: 'Home',\n            ref: '/'\n          }\n        ]}\n      />\n\n      <Form\n        Title=\"Account\"\n        ParentState={[values, setValues]}\n        submitFunction={handleSubmit}\n        Inputs={[\n          { label: 'Email', id: 'email' },\n          { label: 'Password', id: 'password' }\n        ]}\n      />\n    </>\n  );\n};\n\nexport default Login;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

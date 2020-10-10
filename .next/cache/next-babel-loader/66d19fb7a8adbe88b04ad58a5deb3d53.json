@@ -1,1 +1,17 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport Navigation from '../components/Navigation';\n\nconst Login = () => {\n  return __jsx(\"div\", null, \" This is the login page\");\n};\n\nexport default Login;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/login.js"],"names":["React","Navigation","Login"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,UAAP,MAAuB,0BAAvB;;AAEA,MAAMC,KAAK,GAAG,MAAM;AAClB,SAAO,6CAAP;AACD,CAFD;;AAIA,eAAeA,KAAf","sourcesContent":["import React from 'react';\nimport Navigation from '../components/Navigation';\n\nconst Login = () => {\n  return <div> This is the login page</div>;\n};\n\nexport default Login;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\nimport Navigation from '../components/Navigation';\n\nconst Login = () => {\n  return __jsx(\"div\", null, \" This is the login page\");\n};\n\nexport default Login;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/login.js"
+    ],
+    "names": ["React", "Navigation", "Login"],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,UAAP,MAAuB,0BAAvB;;AAEA,MAAMC,KAAK,GAAG,MAAM;AAClB,SAAO,6CAAP;AACD,CAFD;;AAIA,eAAeA,KAAf",
+    "sourcesContent": [
+      "import React from 'react';\nimport Navigation from '../components/Navigation';\n\nconst Login = () => {\n  return <div> This is the login page</div>;\n};\n\nexport default Login;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

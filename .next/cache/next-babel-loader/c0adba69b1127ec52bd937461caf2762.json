@@ -1,1 +1,17 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport { makeStyles } from '@material-ui/core/styles';\nimport Navigation from '../components/Navigation';\n\nvar Login = function Login() {\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"Login\",\n    Links: [{\n      title: 'Home',\n      ref: '/'\n    }]\n  }));\n};\n\n_c = Login;\nexport default Login;\n\nvar _c;\n\n$RefreshReg$(_c, \"Login\");","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/login.js"],"names":["React","makeStyles","Navigation","Login","title","ref"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,SAASC,UAAT,QAA2B,0BAA3B;AACA,OAAOC,UAAP,MAAuB,0BAAvB;;AAEA,IAAMC,KAAK,GAAG,SAARA,KAAQ,GAAM;AAClB,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,OADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEC,MAAAA,KAAK,EAAE,MADT;AAEEC,MAAAA,GAAG,EAAE;AAFP,KADK;AAFT,IADF,CADF;AAaD,CAdD;;KAAMF,K;AAgBN,eAAeA,KAAf","sourcesContent":["import React from 'react';\n\nimport { makeStyles } from '@material-ui/core/styles';\nimport Navigation from '../components/Navigation';\n\nconst Login = () => {\n  return (\n    <>\n      <Navigation\n        Title=\"Login\"\n        Links={[\n          {\n            title: 'Home',\n            ref: '/'\n          }\n        ]}\n      />\n    </>\n  );\n};\n\nexport default Login;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\nimport { makeStyles } from '@material-ui/core/styles';\nimport Navigation from '../components/Navigation';\n\nvar Login = function Login() {\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"Login\",\n    Links: [{\n      title: 'Home',\n      ref: '/'\n    }]\n  }));\n};\n\n_c = Login;\nexport default Login;\n\nvar _c;\n\n$RefreshReg$(_c, \"Login\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/login.js"
+    ],
+    "names": ["React", "makeStyles", "Navigation", "Login", "title", "ref"],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,SAASC,UAAT,QAA2B,0BAA3B;AACA,OAAOC,UAAP,MAAuB,0BAAvB;;AAEA,IAAMC,KAAK,GAAG,SAARA,KAAQ,GAAM;AAClB,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,OADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEC,MAAAA,KAAK,EAAE,MADT;AAEEC,MAAAA,GAAG,EAAE;AAFP,KADK;AAFT,IADF,CADF;AAaD,CAdD;;KAAMF,K;AAgBN,eAAeA,KAAf",
+    "sourcesContent": [
+      "import React from 'react';\n\nimport { makeStyles } from '@material-ui/core/styles';\nimport Navigation from '../components/Navigation';\n\nconst Login = () => {\n  return (\n    <>\n      <Navigation\n        Title=\"Login\"\n        Links={[\n          {\n            title: 'Home',\n            ref: '/'\n          }\n        ]}\n      />\n    </>\n  );\n};\n\nexport default Login;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

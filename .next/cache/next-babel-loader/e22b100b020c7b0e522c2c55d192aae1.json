@@ -1,1 +1,33 @@
-{"ast":null,"code":"var _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React from 'react';\nimport { Avatar, MenuItem } from '@material-ui/core';\nimport { makeStyles } from '@material-ui/core/styles';\nimport purple from '@material-ui/core/colors/purple';\nimport PropTypes from 'prop-types';\nvar useStyles = makeStyles({\n  avatar: {\n    backgroundColor: purple[500]\n  }\n});\n\nvar UserIcon = function UserIcon(_ref) {\n  _s();\n\n  var Letter = _ref.Letter;\n  var classes = useStyles();\n  return __jsx(Avatar, {\n    className: classes.avatar\n  }, Letter);\n};\n\n_s(UserIcon, \"8g5FPXexvSEOsxdmU7HicukHGqY=\", false, function () {\n  return [useStyles];\n});\n\n_c = UserIcon;\nUserIcon.propTypes = {\n  Letter: PropTypes.string\n};\nUserIcon.defaultProps = {\n  Letter: 'E'\n};\nexport default UserIcon;\n\nvar _c;\n\n$RefreshReg$(_c, \"UserIcon\");","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/components/UserIcon/index.js"],"names":["React","Avatar","MenuItem","makeStyles","purple","PropTypes","useStyles","avatar","backgroundColor","UserIcon","Letter","classes","propTypes","string","defaultProps"],"mappings":";;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,SAASC,MAAT,EAAiBC,QAAjB,QAAiC,mBAAjC;AACA,SAASC,UAAT,QAA2B,0BAA3B;AACA,OAAOC,MAAP,MAAmB,iCAAnB;AACA,OAAOC,SAAP,MAAsB,YAAtB;AAEA,IAAMC,SAAS,GAAGH,UAAU,CAAC;AAC3BI,EAAAA,MAAM,EAAE;AACNC,IAAAA,eAAe,EAAEJ,MAAM,CAAC,GAAD;AADjB;AADmB,CAAD,CAA5B;;AAMA,IAAMK,QAAQ,GAAG,SAAXA,QAAW,OAAgB;AAAA;;AAAA,MAAbC,MAAa,QAAbA,MAAa;AAC/B,MAAMC,OAAO,GAAGL,SAAS,EAAzB;AACA,SAAO,MAAC,MAAD;AAAQ,IAAA,SAAS,EAAEK,OAAO,CAACJ;AAA3B,KAAoCG,MAApC,CAAP;AACD,CAHD;;GAAMD,Q;UACYH,S;;;KADZG,Q;AAKNA,QAAQ,CAACG,SAAT,GAAqB;AACnBF,EAAAA,MAAM,EAAEL,SAAS,CAACQ;AADC,CAArB;AAIAJ,QAAQ,CAACK,YAAT,GAAwB;AACtBJ,EAAAA,MAAM,EAAE;AADc,CAAxB;AAIA,eAAeD,QAAf","sourcesContent":["import React from 'react';\n\nimport { Avatar, MenuItem } from '@material-ui/core';\nimport { makeStyles } from '@material-ui/core/styles';\nimport purple from '@material-ui/core/colors/purple';\nimport PropTypes from 'prop-types';\n\nconst useStyles = makeStyles({\n  avatar: {\n    backgroundColor: purple[500]\n  }\n});\n\nconst UserIcon = ({ Letter }) => {\n  const classes = useStyles();\n  return <Avatar className={classes.avatar}>{Letter}</Avatar>;\n};\n\nUserIcon.propTypes = {\n  Letter: PropTypes.string\n};\n\nUserIcon.defaultProps = {\n  Letter: 'E'\n};\n\nexport default UserIcon;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React from 'react';\nimport { Avatar, MenuItem } from '@material-ui/core';\nimport { makeStyles } from '@material-ui/core/styles';\nimport purple from '@material-ui/core/colors/purple';\nimport PropTypes from 'prop-types';\nvar useStyles = makeStyles({\n  avatar: {\n    backgroundColor: purple[500]\n  }\n});\n\nvar UserIcon = function UserIcon(_ref) {\n  _s();\n\n  var Letter = _ref.Letter;\n  var classes = useStyles();\n  return __jsx(Avatar, {\n    className: classes.avatar\n  }, Letter);\n};\n\n_s(UserIcon, \"8g5FPXexvSEOsxdmU7HicukHGqY=\", false, function () {\n  return [useStyles];\n});\n\n_c = UserIcon;\nUserIcon.propTypes = {\n  Letter: PropTypes.string\n};\nUserIcon.defaultProps = {\n  Letter: 'E'\n};\nexport default UserIcon;\n\nvar _c;\n\n$RefreshReg$(_c, \"UserIcon\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/components/UserIcon/index.js"
+    ],
+    "names": [
+      "React",
+      "Avatar",
+      "MenuItem",
+      "makeStyles",
+      "purple",
+      "PropTypes",
+      "useStyles",
+      "avatar",
+      "backgroundColor",
+      "UserIcon",
+      "Letter",
+      "classes",
+      "propTypes",
+      "string",
+      "defaultProps"
+    ],
+    "mappings": ";;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,SAASC,MAAT,EAAiBC,QAAjB,QAAiC,mBAAjC;AACA,SAASC,UAAT,QAA2B,0BAA3B;AACA,OAAOC,MAAP,MAAmB,iCAAnB;AACA,OAAOC,SAAP,MAAsB,YAAtB;AAEA,IAAMC,SAAS,GAAGH,UAAU,CAAC;AAC3BI,EAAAA,MAAM,EAAE;AACNC,IAAAA,eAAe,EAAEJ,MAAM,CAAC,GAAD;AADjB;AADmB,CAAD,CAA5B;;AAMA,IAAMK,QAAQ,GAAG,SAAXA,QAAW,OAAgB;AAAA;;AAAA,MAAbC,MAAa,QAAbA,MAAa;AAC/B,MAAMC,OAAO,GAAGL,SAAS,EAAzB;AACA,SAAO,MAAC,MAAD;AAAQ,IAAA,SAAS,EAAEK,OAAO,CAACJ;AAA3B,KAAoCG,MAApC,CAAP;AACD,CAHD;;GAAMD,Q;UACYH,S;;;KADZG,Q;AAKNA,QAAQ,CAACG,SAAT,GAAqB;AACnBF,EAAAA,MAAM,EAAEL,SAAS,CAACQ;AADC,CAArB;AAIAJ,QAAQ,CAACK,YAAT,GAAwB;AACtBJ,EAAAA,MAAM,EAAE;AADc,CAAxB;AAIA,eAAeD,QAAf",
+    "sourcesContent": [
+      "import React from 'react';\n\nimport { Avatar, MenuItem } from '@material-ui/core';\nimport { makeStyles } from '@material-ui/core/styles';\nimport purple from '@material-ui/core/colors/purple';\nimport PropTypes from 'prop-types';\n\nconst useStyles = makeStyles({\n  avatar: {\n    backgroundColor: purple[500]\n  }\n});\n\nconst UserIcon = ({ Letter }) => {\n  const classes = useStyles();\n  return <Avatar className={classes.avatar}>{Letter}</Avatar>;\n};\n\nUserIcon.propTypes = {\n  Letter: PropTypes.string\n};\n\nUserIcon.defaultProps = {\n  Letter: 'E'\n};\n\nexport default UserIcon;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
