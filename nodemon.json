@@ -1,3 +1,9 @@
 {
-  "watch": ["index.js"]
+  "watch": [
+    "index.js",
+    "./models/*.js",
+    "./routes/*.js",
+    "./services/*.js",
+    "./controllers/*.js"
+  ]
 }

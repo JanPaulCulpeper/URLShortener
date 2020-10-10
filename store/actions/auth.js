@@ -1,13 +1,26 @@
 import { authTypes } from './types';
 
-const { AUTH_ACTION_FAILED, SIGNIN } = authTypes;
+const { AUTH_ACTION_FAILED, AUTH, AUTH_LOADING } = authTypes;
 
-// export const logouot = () => (dispatch, getState) => {};
-export const signup = ({ email, password }) => async (dispatch) => {
+export const verifyAuth = () => async (dispatch) => {
+  dispatch({ type: AUTH_LOADING });
   try {
-    const res = await fetch('http://localhost:5000/api/auth/signup', {
+    const res = await fetch('http://localhost:5000/api/auth/verify');
+    dispatch({ type: AUTH, payload: (await res.json()).user });
+  } catch (err) {
+    dispatch({
+      type: AUTH_ACTION_FAILED,
+      payload: err
+    });
+  }
+};
+
+export const login = (credentials) => async (dispatch) => {
+  dispatch({ type: AUTH_LOADING });
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify(credentials),
       headers: { 'Content-Type': 'application/json' }
     });
     const data = await res.json();
@@ -16,11 +29,46 @@ export const signup = ({ email, password }) => async (dispatch) => {
       dispatch({ type: AUTH_ACTION_FAILED, payload: data.errors });
     }
     if (data.user) {
-      dispatch({ type: SIGNIN, payload: data.user });
+      dispatch({ type: AUTH, payload: data.user });
+    }
+  } catch (err) {
+    dispatch({ type: AUTH_ACTION_FAILED, payload: err });
+  }
+};
+// export const logouot = () => (dispatch, getState) => {};
+export const signup = ({ email, password, userName }) => async (dispatch) => {
+  dispatch({ type: AUTH_LOADING });
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/signup', {
+      method: 'POST',
+      body: JSON.stringify({ email, password, userName }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+    const data = await res.json();
+
+    if (data.errors) {
+      dispatch({ type: AUTH_ACTION_FAILED, payload: data.errors });
+    }
+    if (data.user) {
+      dispatch({ type: AUTH, payload: data.user });
     }
   } catch (err) {
     dispatch({ type: AUTH_ACTION_FAILED, payload: err });
   }
 };
 
-export const login = () => {};
+export const logout = () => async (dispatch) => {
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/logout');
+
+    const data = await res.json();
+
+    if (data.errors) {
+      dispatch({ type: AUTH_ACTION_FAILED, payload: data.errors });
+    } else {
+      dispatch({ type: AUTH, payload: data.user });
+    }
+  } catch (err) {
+    dispatch({ type: AUTH_ACTION_FAILED, payload: err });
+  }
+};

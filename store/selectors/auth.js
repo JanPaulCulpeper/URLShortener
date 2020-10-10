@@ -9,3 +9,7 @@ export const selectAuthToken = createSelector(selectAuth, (auth) => {
 export const selectError = createSelector(selectAuth, (auth) => {
   return auth.error;
 });
+
+export const selectLoading = createSelector(selectAuth, (auth) => {
+  return auth.loading;
+});

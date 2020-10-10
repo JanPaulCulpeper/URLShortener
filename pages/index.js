@@ -1,28 +1,41 @@
-/*
-We import React if we are going to write jsx (html react language),
-not necessary in nextjs but it is good practice.
-*/
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-// import { useSelector, useDispatch } from 'react-redux';
-//
-// import { authSelectors } from '../store/selectors';
-// import { authActions } from '../store/actions';
+import Navigation from '../components/Navigation';
+import { authSelectors } from '../store/selectors';
+import { authActions } from '../store/actions';
+import UserIcon from '../components/UserIcon';
 
-// we create an lambda function that returns either some text or JSX
-// NOTE: This is function-based react programming
 const Home = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const authToken = useSelector(authSelectors.selectAuthToken);
 
-  // const init = () => {
-  //   dispatch(authActions.signup('blah', 'blah'));
-  // };
-
-  // const authToken = useSelector(authSelectors.selectAuthToken);
-  // console.log(authToken);
-
-  return <div>Home</div>;
+  const Logout = React.useCallback(async () => {
+    dispatch(authActions.logout());
+  }, [dispatch, authActions]);
+  return (
+    <>
+      <Navigation
+        Title="URL-shortener"
+        Links={[
+          {
+            title: 'Login',
+            ref: '/login',
+            condition: !!authToken,
+            replacement: (
+              <UserIcon
+                Actions={[
+                  { name: 'Dashboard', act: () => {} },
+                  { name: 'Logout', act: Logout }
+                ]}
+                Letter={authToken ? authToken.userName[0] : null}
+              />
+            )
+          }
+        ]}
+      />
+    </>
+  );
 };
 
-// We need to export our component to make it accesible elswhere
 export default Home;

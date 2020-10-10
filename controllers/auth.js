@@ -30,13 +30,13 @@ const createToken = (id) => {
 };
 
 const signupPost = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, userName } = req.body;
 
   try {
-    const user = await User.create({ email, password });
+    const user = await User.create({ email, password, userName });
     const token = createToken(user._id);
-    res.cookie('t2gpr', token, { httpOnly: true, maxAge: maxAge * 1000 });
-    res.status(201).json({ user: user._id });
+    res.cookie('urlshort', token, { httpOnly: true, maxAge: maxAge * 1000 });
+    res.status(201).json({ user });
   } catch (err) {
     const errors = handleErrors(err);
     res.status(400).json({ errors });
@@ -44,11 +44,12 @@ const signupPost = async (req, res) => {
 };
 const loginPost = async (req, res) => {
   const { email, password } = req.body;
+
   try {
     const user = await User.login(email, password);
-    const token = createToken(user._id);
-    res.cookie('t2gpr', token, { httpOnly: true, maxAge: maxAge * 1000 });
-    res.status(200).json({ user: user._id });
+    const token = createToken(user);
+    res.cookie('urlshort', token, { httpOnly: true, maxAge: maxAge * 1000 });
+    res.status(200).json({ user });
   } catch (err) {
     const errors = handleErrors(err);
     res.status(400).json({ errors });
@@ -61,7 +62,7 @@ const logoutGet = async (req, res) => {
 };
 
 const verifyAuth = async (req, res) => {
-  const token = req.cookies.t2gpr;
+  const token = req.cookies.urlshort;
 
   if (token) {
     jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {

@@ -1,10 +1,11 @@
-import { authActions } from '../actions';
+import { authTypes } from '../actions/types';
 
-const { AUTH_ACTION_FAILED, SIGNIN } = authActions;
+const { AUTH_ACTION_FAILED, AUTH, AUTH_LOADING } = authTypes;
 
 const initialState = {
   error: null,
-  authToken: null
+  authToken: null,
+  loading: false
 };
 
 const authReducer = (state = initialState, action) => {
@@ -12,16 +13,23 @@ const authReducer = (state = initialState, action) => {
     case AUTH_ACTION_FAILED: {
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
+        loading: false
       };
     }
-    case SIGNIN: {
+    case AUTH: {
       return {
         ...state,
         error: null,
-        authToken: action.payload
+        authToken: action.payload,
+        loading: false
       };
     }
+    case AUTH_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
     default:
       return state;
   }
