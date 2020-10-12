@@ -24,7 +24,7 @@ const Navigation = ({ Links, Title }) => {
               return link.replacement;
             }
             return (
-              <Link href={link.ref}>
+              <Link key={link} href={link.ref}>
                 <Button color="inherit">{link.title}</Button>
               </Link>
             );

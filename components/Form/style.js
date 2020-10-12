@@ -14,7 +14,8 @@ const useStyles = makeStyles({
     justifyContent: 'space-between'
   },
   input: {
-    marginBottom: 30
+    marginBottom: 30,
+    width: '100%'
   },
   buttons: {
     width: '100%',

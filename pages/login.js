@@ -12,14 +12,15 @@ const Login = () => {
   const [values, setValues] = React.useState({});
   const authToken = useSelector(authSelectors.selectAuthToken);
   const { email, password } = values;
-  const handleSubmit = React.useCallback(
-    (e) => {
-      e.preventDefault();
 
-      dispatch(authActions.login({ email, password }));
-    },
-    [values, dispatch, authActions]
-  );
+  const onLogin = React.useCallback(() => {
+    dispatch(authActions.login({ email, password }));
+  }, [values, dispatch, authActions]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onLogin();
+  };
 
   React.useEffect(() => {
     if (authToken) router.push('/');

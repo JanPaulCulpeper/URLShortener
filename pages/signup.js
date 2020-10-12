@@ -12,8 +12,7 @@ const Signup = () => {
   const [values, setValues] = React.useState({});
   const authToken = useSelector(authSelectors.selectAuthToken);
   const { cpassword, password, userName, email } = values;
-  const handleSubmit = React.useCallback((e) => {
-    e.preventDefault();
+  const onSignup = React.useCallback(() => {
     if (cpassword !== password) {
       setValues({ ...values, error: "passwords don't match!" });
     } else {
@@ -25,8 +24,12 @@ const Signup = () => {
         })
       );
     }
-  }, []);
+  }, [values, dispatch, authActions]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSignup();
+  };
   React.useEffect(() => {
     if (authToken) router.push('/');
   }, [authToken]);

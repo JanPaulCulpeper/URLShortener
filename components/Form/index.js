@@ -37,21 +37,29 @@ const Form = ({
       <CardContent>
         <form className={classes.form} onSubmit={SubmitFunction}>
           {Inputs.map((input) => (
-            <TextField
-              type={input.type}
-              onChange={handleChange}
-              className={classes.input}
-              id={input.id}
-              label={input.label}
-              variant="outlined"
-            />
+            <div className={classes.container}>
+              <TextField
+                style={input.style}
+                type={input.type}
+                onChange={handleChange}
+                value={
+                  input.validation
+                    ? input.validation(ParentState[0][input.id])
+                    : ParentState[0][input.id]
+                }
+                className={classes.input}
+                id={input.id}
+                label={input.exteriorLabel || input.label}
+                variant="outlined"
+              />
+            </div>
           ))}
           {LowerText ? (
             <div className={classes.text}>
-              <Typography>{LowerText.info}</Typography>
-              <Link href={LowerText.link.ref}>
+              <Typography>{LowerText.info || ''}</Typography>
+              <Link href={LowerText.link.ref || '#'}>
                 <Typography className={classes.link}>
-                  {LowerText.link.name}
+                  {LowerText.link.name || ''}
                 </Typography>
               </Link>
             </div>
@@ -81,9 +89,7 @@ Form.defaultProps = {
   Title: 'Example',
   SubmitLabel: 'submit',
   ParentState: {},
-  SubmitFunction: (e) => {
-    e.preventDefault();
-  },
+  SubmitFunction: (e) => e.preventDefault(),
   LowerText: null
 };
 

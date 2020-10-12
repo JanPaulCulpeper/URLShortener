@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./services/db');
 const authRoutes = require('./routes/auth');
+const urlRoutes = require('./routes/url');
+const redirect = require('./middleware/url');
 /*
  we check nodejs' environmental
  variable to see wether
@@ -59,9 +61,10 @@ app.prepare().then(() => {
 
   // api route handling
   server.use('/api/auth', authRoutes);
+  server.use('/api/url', urlRoutes);
 
   // We let nextjs handle all incoming requests the "*" is regex for "all"
-  server.get('*', (req, res) => handle(req, res));
+  server.get('*', redirect, handle);
 
   // We tell our server to serve our app to the selected port
   server.listen(PORT, (err) => {

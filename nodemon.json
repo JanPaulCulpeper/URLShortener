@@ -4,6 +4,7 @@
     "./models/*.js",
     "./routes/*.js",
     "./services/*.js",
-    "./controllers/*.js"
+    "./controllers/*.js",
+    "./middleware/*.js"
   ]
 }

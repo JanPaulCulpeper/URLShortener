@@ -8,6 +8,7 @@
     "jest": true,
     "node": true
   },
+  "parser": "babel-eslint",
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "no-underscore-dangle": "off",
