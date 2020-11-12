@@ -57,7 +57,7 @@ const loginPost = async (req, res) => {
 };
 
 const logoutGet = async (req, res) => {
-  await res.cookie('jwt', '', { maxAge: 1 });
+  await res.cookie('urlshort', '', { maxAge: 1 });
   res.status(200).json({ user: null });
 };
 

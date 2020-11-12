@@ -1,1 +1,33 @@
-{"ast":null,"code":"const Url = require('../models/url');\n\nconst redirect = async (req, res, next) => {\n  const custom = req.path.substring(1);\n  const urlDoc = await Url.findOne({\n    [`URLS.${custom}`]: {\n      $exists: true\n    }\n  });\n\n  if (urlDoc) {\n    res.redirect(urlDoc.URLS[custom]);\n  } else {\n    next();\n  }\n};\n\nmodule.exports = redirect;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/middleware/url.js"],"names":["Url","require","redirect","req","res","next","custom","path","substring","urlDoc","findOne","$exists","URLS","module","exports"],"mappings":"AAAA,MAAMA,GAAG,GAAGC,OAAO,CAAC,eAAD,CAAnB;;AAEA,MAAMC,QAAQ,GAAG,OAAOC,GAAP,EAAYC,GAAZ,EAAiBC,IAAjB,KAA0B;AACzC,QAAMC,MAAM,GAAGH,GAAG,CAACI,IAAJ,CAASC,SAAT,CAAmB,CAAnB,CAAf;AAEA,QAAMC,MAAM,GAAG,MAAMT,GAAG,CAACU,OAAJ,CAAY;AAC/B,KAAE,QAAOJ,MAAO,EAAhB,GAAoB;AAAEK,MAAAA,OAAO,EAAE;AAAX;AADW,GAAZ,CAArB;;AAIA,MAAIF,MAAJ,EAAY;AACVL,IAAAA,GAAG,CAACF,QAAJ,CAAaO,MAAM,CAACG,IAAP,CAAYN,MAAZ,CAAb;AACD,GAFD,MAEO;AACLD,IAAAA,IAAI;AACL;AACF,CAZD;;AAcAQ,MAAM,CAACC,OAAP,GAAiBZ,QAAjB","sourcesContent":["const Url = require('../models/url');\n\nconst redirect = async (req, res, next) => {\n  const custom = req.path.substring(1);\n\n  const urlDoc = await Url.findOne({\n    [`URLS.${custom}`]: { $exists: true }\n  });\n\n  if (urlDoc) {\n    res.redirect(urlDoc.URLS[custom]);\n  } else {\n    next();\n  }\n};\n\nmodule.exports = redirect;\n"]},"metadata":{},"sourceType":"script"}
+{
+  "ast": null,
+  "code": "const Url = require('../models/url');\n\nconst redirect = async (req, res, next) => {\n  const custom = req.path.substring(1);\n  const urlDoc = await Url.findOne({\n    [`URLS.${custom}`]: {\n      $exists: true\n    }\n  });\n\n  if (urlDoc) {\n    res.redirect(urlDoc.URLS[custom]);\n  } else {\n    next();\n  }\n};\n\nmodule.exports = redirect;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/middleware/url.js"
+    ],
+    "names": [
+      "Url",
+      "require",
+      "redirect",
+      "req",
+      "res",
+      "next",
+      "custom",
+      "path",
+      "substring",
+      "urlDoc",
+      "findOne",
+      "$exists",
+      "URLS",
+      "module",
+      "exports"
+    ],
+    "mappings": "AAAA,MAAMA,GAAG,GAAGC,OAAO,CAAC,eAAD,CAAnB;;AAEA,MAAMC,QAAQ,GAAG,OAAOC,GAAP,EAAYC,GAAZ,EAAiBC,IAAjB,KAA0B;AACzC,QAAMC,MAAM,GAAGH,GAAG,CAACI,IAAJ,CAASC,SAAT,CAAmB,CAAnB,CAAf;AAEA,QAAMC,MAAM,GAAG,MAAMT,GAAG,CAACU,OAAJ,CAAY;AAC/B,KAAE,QAAOJ,MAAO,EAAhB,GAAoB;AAAEK,MAAAA,OAAO,EAAE;AAAX;AADW,GAAZ,CAArB;;AAIA,MAAIF,MAAJ,EAAY;AACVL,IAAAA,GAAG,CAACF,QAAJ,CAAaO,MAAM,CAACG,IAAP,CAAYN,MAAZ,CAAb;AACD,GAFD,MAEO;AACLD,IAAAA,IAAI;AACL;AACF,CAZD;;AAcAQ,MAAM,CAACC,OAAP,GAAiBZ,QAAjB",
+    "sourcesContent": [
+      "const Url = require('../models/url');\n\nconst redirect = async (req, res, next) => {\n  const custom = req.path.substring(1);\n\n  const urlDoc = await Url.findOne({\n    [`URLS.${custom}`]: { $exists: true }\n  });\n\n  if (urlDoc) {\n    res.redirect(urlDoc.URLS[custom]);\n  } else {\n    next();\n  }\n};\n\nmodule.exports = redirect;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

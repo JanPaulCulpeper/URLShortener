@@ -1,1 +1,27 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nconst Shortening = ({\n  ParentState,\n  Submit\n}) => {\n  return __jsx(React.Fragment, null, __jsx(\"form\", null, __jsx(Card, null, \" Input\")));\n};\n\nShortening.propTypes = {\n  ParentState: PropTypes.instanceOf(Objects)\n};\nexport default Shortening;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/components/Shortening/index.js"],"names":["React","PropTypes","Card","Shortening","ParentState","Submit","propTypes","instanceOf","Objects"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,SAAP,MAAsB,YAAtB;AACA,SAASC,IAAT,QAAqB,mBAArB;;AAEA,MAAMC,UAAU,GAAG,CAAC;AAAEC,EAAAA,WAAF;AAAeC,EAAAA;AAAf,CAAD,KAA6B;AAC9C,SACE,4BACE,oBACE,MAAC,IAAD,iBADF,CADF,CADF;AAOD,CARD;;AAUAF,UAAU,CAACG,SAAX,GAAuB;AACrBF,EAAAA,WAAW,EAAEH,SAAS,CAACM,UAAV,CAAqBC,OAArB;AADQ,CAAvB;AAIA,eAAeL,UAAf","sourcesContent":["import React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nconst Shortening = ({ ParentState, Submit }) => {\n  return (\n    <>\n      <form>\n        <Card> Input</Card>\n      </form>\n    </>\n  );\n};\n\nShortening.propTypes = {\n  ParentState: PropTypes.instanceOf(Objects)\n};\n\nexport default Shortening;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nconst Shortening = ({\n  ParentState,\n  Submit\n}) => {\n  return __jsx(React.Fragment, null, __jsx(\"form\", null, __jsx(Card, null, \" Input\")));\n};\n\nShortening.propTypes = {\n  ParentState: PropTypes.instanceOf(Objects)\n};\nexport default Shortening;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/components/Shortening/index.js"
+    ],
+    "names": [
+      "React",
+      "PropTypes",
+      "Card",
+      "Shortening",
+      "ParentState",
+      "Submit",
+      "propTypes",
+      "instanceOf",
+      "Objects"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,SAAP,MAAsB,YAAtB;AACA,SAASC,IAAT,QAAqB,mBAArB;;AAEA,MAAMC,UAAU,GAAG,CAAC;AAAEC,EAAAA,WAAF;AAAeC,EAAAA;AAAf,CAAD,KAA6B;AAC9C,SACE,4BACE,oBACE,MAAC,IAAD,iBADF,CADF,CADF;AAOD,CARD;;AAUAF,UAAU,CAACG,SAAX,GAAuB;AACrBF,EAAAA,WAAW,EAAEH,SAAS,CAACM,UAAV,CAAqBC,OAArB;AADQ,CAAvB;AAIA,eAAeL,UAAf",
+    "sourcesContent": [
+      "import React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nconst Shortening = ({ ParentState, Submit }) => {\n  return (\n    <>\n      <form>\n        <Card> Input</Card>\n      </form>\n    </>\n  );\n};\n\nShortening.propTypes = {\n  ParentState: PropTypes.instanceOf(Objects)\n};\n\nexport default Shortening;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

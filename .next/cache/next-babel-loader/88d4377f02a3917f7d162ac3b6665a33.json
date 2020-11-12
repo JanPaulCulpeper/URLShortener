@@ -1,1 +1,31 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nvar InputWButton = function InputWButton(_ref) {\n  var ParentState = _ref.ParentState,\n      Submit = _ref.Submit;\n  return __jsx(React.Fragment, null, __jsx(\"form\", null, __jsx(Card, null, \" Input\")));\n};\n\n_c = InputWButton;\nInputWButton.propTypes = {\n  ParentState: PropTypes.instanceOf(Object),\n  Submit: PropTypes.func\n};\nInputWButton.defaultProps = {\n  ParentState: {},\n  Submit: function Submit(e) {\n    e.preventDefault;\n  }\n};\nexport default InputWButton;\n\nvar _c;\n\n$RefreshReg$(_c, \"InputWButton\");","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/components/InputWButton/index.js"],"names":["React","PropTypes","Card","InputWButton","ParentState","Submit","propTypes","instanceOf","Object","func","defaultProps","e","preventDefault"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,SAAP,MAAsB,YAAtB;AACA,SAASC,IAAT,QAAqB,mBAArB;;AAEA,IAAMC,YAAY,GAAG,SAAfA,YAAe,OAA6B;AAAA,MAA1BC,WAA0B,QAA1BA,WAA0B;AAAA,MAAbC,MAAa,QAAbA,MAAa;AAChD,SACE,4BACE,oBACE,MAAC,IAAD,iBADF,CADF,CADF;AAOD,CARD;;KAAMF,Y;AAUNA,YAAY,CAACG,SAAb,GAAyB;AACvBF,EAAAA,WAAW,EAAEH,SAAS,CAACM,UAAV,CAAqBC,MAArB,CADU;AAEvBH,EAAAA,MAAM,EAAEJ,SAAS,CAACQ;AAFK,CAAzB;AAKAN,YAAY,CAACO,YAAb,GAA4B;AAC1BN,EAAAA,WAAW,EAAE,EADa;AAE1BC,EAAAA,MAAM,EAAE,gBAACM,CAAD,EAAO;AACbA,IAAAA,CAAC,CAACC,cAAF;AACD;AAJyB,CAA5B;AAOA,eAAeT,YAAf","sourcesContent":["import React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nconst InputWButton = ({ ParentState, Submit }) => {\n  return (\n    <>\n      <form>\n        <Card> Input</Card>\n      </form>\n    </>\n  );\n};\n\nInputWButton.propTypes = {\n  ParentState: PropTypes.instanceOf(Object),\n  Submit: PropTypes.func\n};\n\nInputWButton.defaultProps = {\n  ParentState: {},\n  Submit: (e) => {\n    e.preventDefault;\n  }\n};\n\nexport default InputWButton;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nvar InputWButton = function InputWButton(_ref) {\n  var ParentState = _ref.ParentState,\n      Submit = _ref.Submit;\n  return __jsx(React.Fragment, null, __jsx(\"form\", null, __jsx(Card, null, \" Input\")));\n};\n\n_c = InputWButton;\nInputWButton.propTypes = {\n  ParentState: PropTypes.instanceOf(Object),\n  Submit: PropTypes.func\n};\nInputWButton.defaultProps = {\n  ParentState: {},\n  Submit: function Submit(e) {\n    e.preventDefault;\n  }\n};\nexport default InputWButton;\n\nvar _c;\n\n$RefreshReg$(_c, \"InputWButton\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/components/InputWButton/index.js"
+    ],
+    "names": [
+      "React",
+      "PropTypes",
+      "Card",
+      "InputWButton",
+      "ParentState",
+      "Submit",
+      "propTypes",
+      "instanceOf",
+      "Object",
+      "func",
+      "defaultProps",
+      "e",
+      "preventDefault"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,OAAOC,SAAP,MAAsB,YAAtB;AACA,SAASC,IAAT,QAAqB,mBAArB;;AAEA,IAAMC,YAAY,GAAG,SAAfA,YAAe,OAA6B;AAAA,MAA1BC,WAA0B,QAA1BA,WAA0B;AAAA,MAAbC,MAAa,QAAbA,MAAa;AAChD,SACE,4BACE,oBACE,MAAC,IAAD,iBADF,CADF,CADF;AAOD,CARD;;KAAMF,Y;AAUNA,YAAY,CAACG,SAAb,GAAyB;AACvBF,EAAAA,WAAW,EAAEH,SAAS,CAACM,UAAV,CAAqBC,MAArB,CADU;AAEvBH,EAAAA,MAAM,EAAEJ,SAAS,CAACQ;AAFK,CAAzB;AAKAN,YAAY,CAACO,YAAb,GAA4B;AAC1BN,EAAAA,WAAW,EAAE,EADa;AAE1BC,EAAAA,MAAM,EAAE,gBAACM,CAAD,EAAO;AACbA,IAAAA,CAAC,CAACC,cAAF;AACD;AAJyB,CAA5B;AAOA,eAAeT,YAAf",
+    "sourcesContent": [
+      "import React from 'react';\nimport PropTypes from 'prop-types';\nimport { Card } from '@material-ui/core';\n\nconst InputWButton = ({ ParentState, Submit }) => {\n  return (\n    <>\n      <form>\n        <Card> Input</Card>\n      </form>\n    </>\n  );\n};\n\nInputWButton.propTypes = {\n  ParentState: PropTypes.instanceOf(Object),\n  Submit: PropTypes.func\n};\n\nInputWButton.defaultProps = {\n  ParentState: {},\n  Submit: (e) => {\n    e.preventDefault;\n  }\n};\n\nexport default InputWButton;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

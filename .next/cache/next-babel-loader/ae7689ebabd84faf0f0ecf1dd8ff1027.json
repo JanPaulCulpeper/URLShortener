@@ -1,1 +1,33 @@
-{"ast":null,"code":"var _regeneratorRuntime = require(\"@babel/runtime/regenerator\");\n\nvar _defineProperty = require(\"@babel/runtime/helpers/defineProperty\");\n\nvar _asyncToGenerator = require(\"@babel/runtime/helpers/asyncToGenerator\");\n\nvar Url = require('../models/url');\n\nvar redirect = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(req, res, next) {\n    var custom, urlDoc;\n    return _regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            custom = req.path.substring(1);\n            _context.next = 3;\n            return Url.findOne(_defineProperty({}, \"URLS.\".concat(custom), {\n              $exists: true\n            }));\n\n          case 3:\n            urlDoc = _context.sent;\n\n            if (urlDoc) {\n              res.redirect(urlDoc.URLS[custom]);\n            } else {\n              next();\n            }\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function redirect(_x, _x2, _x3) {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nmodule.exports = redirect;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/middleware/url.js"],"names":["Url","require","redirect","req","res","next","custom","path","substring","findOne","$exists","urlDoc","URLS","module","exports"],"mappings":";;;;;;AAAA,IAAMA,GAAG,GAAGC,OAAO,CAAC,eAAD,CAAnB;;AAEA,IAAMC,QAAQ;AAAA,sEAAG,iBAAOC,GAAP,EAAYC,GAAZ,EAAiBC,IAAjB;AAAA;AAAA;AAAA;AAAA;AAAA;AACTC,YAAAA,MADS,GACAH,GAAG,CAACI,IAAJ,CAASC,SAAT,CAAmB,CAAnB,CADA;AAAA;AAAA,mBAGMR,GAAG,CAACS,OAAJ,oCACVH,MADU,GACC;AAAEI,cAAAA,OAAO,EAAE;AAAX,aADD,EAHN;;AAAA;AAGTC,YAAAA,MAHS;;AAOf,gBAAIA,MAAJ,EAAY;AACVP,cAAAA,GAAG,CAACF,QAAJ,CAAaS,MAAM,CAACC,IAAP,CAAYN,MAAZ,CAAb;AACD,aAFD,MAEO;AACLD,cAAAA,IAAI;AACL;;AAXc;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAH;;AAAA,kBAARH,QAAQ;AAAA;AAAA;AAAA,GAAd;;AAcAW,MAAM,CAACC,OAAP,GAAiBZ,QAAjB","sourcesContent":["const Url = require('../models/url');\n\nconst redirect = async (req, res, next) => {\n  const custom = req.path.substring(1);\n\n  const urlDoc = await Url.findOne({\n    [`URLS.${custom}`]: { $exists: true }\n  });\n\n  if (urlDoc) {\n    res.redirect(urlDoc.URLS[custom]);\n  } else {\n    next();\n  }\n};\n\nmodule.exports = redirect;\n"]},"metadata":{},"sourceType":"script"}
+{
+  "ast": null,
+  "code": "var _regeneratorRuntime = require(\"@babel/runtime/regenerator\");\n\nvar _defineProperty = require(\"@babel/runtime/helpers/defineProperty\");\n\nvar _asyncToGenerator = require(\"@babel/runtime/helpers/asyncToGenerator\");\n\nvar Url = require('../models/url');\n\nvar redirect = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(req, res, next) {\n    var custom, urlDoc;\n    return _regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            custom = req.path.substring(1);\n            _context.next = 3;\n            return Url.findOne(_defineProperty({}, \"URLS.\".concat(custom), {\n              $exists: true\n            }));\n\n          case 3:\n            urlDoc = _context.sent;\n\n            if (urlDoc) {\n              res.redirect(urlDoc.URLS[custom]);\n            } else {\n              next();\n            }\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function redirect(_x, _x2, _x3) {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nmodule.exports = redirect;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/middleware/url.js"
+    ],
+    "names": [
+      "Url",
+      "require",
+      "redirect",
+      "req",
+      "res",
+      "next",
+      "custom",
+      "path",
+      "substring",
+      "findOne",
+      "$exists",
+      "urlDoc",
+      "URLS",
+      "module",
+      "exports"
+    ],
+    "mappings": ";;;;;;AAAA,IAAMA,GAAG,GAAGC,OAAO,CAAC,eAAD,CAAnB;;AAEA,IAAMC,QAAQ;AAAA,sEAAG,iBAAOC,GAAP,EAAYC,GAAZ,EAAiBC,IAAjB;AAAA;AAAA;AAAA;AAAA;AAAA;AACTC,YAAAA,MADS,GACAH,GAAG,CAACI,IAAJ,CAASC,SAAT,CAAmB,CAAnB,CADA;AAAA;AAAA,mBAGMR,GAAG,CAACS,OAAJ,oCACVH,MADU,GACC;AAAEI,cAAAA,OAAO,EAAE;AAAX,aADD,EAHN;;AAAA;AAGTC,YAAAA,MAHS;;AAOf,gBAAIA,MAAJ,EAAY;AACVP,cAAAA,GAAG,CAACF,QAAJ,CAAaS,MAAM,CAACC,IAAP,CAAYN,MAAZ,CAAb;AACD,aAFD,MAEO;AACLD,cAAAA,IAAI;AACL;;AAXc;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAH;;AAAA,kBAARH,QAAQ;AAAA;AAAA;AAAA,GAAd;;AAcAW,MAAM,CAACC,OAAP,GAAiBZ,QAAjB",
+    "sourcesContent": [
+      "const Url = require('../models/url');\n\nconst redirect = async (req, res, next) => {\n  const custom = req.path.substring(1);\n\n  const urlDoc = await Url.findOne({\n    [`URLS.${custom}`]: { $exists: true }\n  });\n\n  if (urlDoc) {\n    res.redirect(urlDoc.URLS[custom]);\n  } else {\n    next();\n  }\n};\n\nmodule.exports = redirect;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

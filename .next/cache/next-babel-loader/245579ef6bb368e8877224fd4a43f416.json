@@ -1,1 +1,44 @@
-{"ast":null,"code":"import { makeStyles } from '@material-ui/core/styles';\nimport blue from '@material-ui/core/colors/blue';\nimport orange from '@material-ui/core/colors/orange';\nconst useStyles = makeStyles({\n  card: {\n    marginTop: 50,\n    margin: '0 auto',\n    maxWidth: 600\n  },\n  form: {\n    display: 'flex',\n    flexDirection: 'column',\n    justifyContent: 'space-between'\n  },\n  input: {\n    marginBottom: 30,\n    width: '100%'\n  },\n  buttons: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center'\n  },\n  title: {\n    textAlign: 'center'\n  },\n  text: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center',\n    marginBottom: 20\n  },\n  link: {\n    marginLeft: 10,\n    color: blue[800],\n    '&:hover': {\n      color: orange[800],\n      cursor: 'pointer',\n      textDecoration: 'underline'\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'row',\n      alignItems: 'center',\n      justifyContent: 'center',\n      '&:p': {\n        display: 'inline-block'\n      }\n    }\n  }\n});\nexport default useStyles;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/components/Form/style.js"],"names":["makeStyles","blue","orange","useStyles","card","marginTop","margin","maxWidth","form","display","flexDirection","justifyContent","input","marginBottom","width","buttons","title","textAlign","text","link","marginLeft","color","cursor","textDecoration","container","alignItems"],"mappings":"AAAA,SAASA,UAAT,QAA2B,0BAA3B;AACA,OAAOC,IAAP,MAAiB,+BAAjB;AACA,OAAOC,MAAP,MAAmB,iCAAnB;AAEA,MAAMC,SAAS,GAAGH,UAAU,CAAC;AAC3BI,EAAAA,IAAI,EAAE;AACJC,IAAAA,SAAS,EAAE,EADP;AAEJC,IAAAA,MAAM,EAAE,QAFJ;AAGJC,IAAAA,QAAQ,EAAE;AAHN,GADqB;AAM3BC,EAAAA,IAAI,EAAE;AACJC,IAAAA,OAAO,EAAE,MADL;AAEJC,IAAAA,aAAa,EAAE,QAFX;AAGJC,IAAAA,cAAc,EAAE;AAHZ,GANqB;AAW3BC,EAAAA,KAAK,EAAE;AACLC,IAAAA,YAAY,EAAE,EADT;AAELC,IAAAA,KAAK,EAAE;AAFF,GAXoB;AAe3BC,EAAAA,OAAO,EAAE;AACPD,IAAAA,KAAK,EAAE,MADA;AAEPL,IAAAA,OAAO,EAAE,MAFF;AAGPE,IAAAA,cAAc,EAAE;AAHT,GAfkB;AAoB3BK,EAAAA,KAAK,EAAE;AACLC,IAAAA,SAAS,EAAE;AADN,GApBoB;AAuB3BC,EAAAA,IAAI,EAAE;AACJJ,IAAAA,KAAK,EAAE,MADH;AAEJL,IAAAA,OAAO,EAAE,MAFL;AAGJE,IAAAA,cAAc,EAAE,QAHZ;AAIJE,IAAAA,YAAY,EAAE;AAJV,GAvBqB;AA6B3BM,EAAAA,IAAI,EAAE;AACJC,IAAAA,UAAU,EAAE,EADR;AAEJC,IAAAA,KAAK,EAAEpB,IAAI,CAAC,GAAD,CAFP;AAGJ,eAAW;AACToB,MAAAA,KAAK,EAAEnB,MAAM,CAAC,GAAD,CADJ;AAEToB,MAAAA,MAAM,EAAE,SAFC;AAGTC,MAAAA,cAAc,EAAE;AAHP,KAHP;AAQJC,IAAAA,SAAS,EAAE;AACTf,MAAAA,OAAO,EAAE,MADA;AAETC,MAAAA,aAAa,EAAE,KAFN;AAGTe,MAAAA,UAAU,EAAE,QAHH;AAITd,MAAAA,cAAc,EAAE,QAJP;AAKT,aAAO;AACLF,QAAAA,OAAO,EAAE;AADJ;AALE;AARP;AA7BqB,CAAD,CAA5B;AAiDA,eAAeN,SAAf","sourcesContent":["import { makeStyles } from '@material-ui/core/styles';\nimport blue from '@material-ui/core/colors/blue';\nimport orange from '@material-ui/core/colors/orange';\n\nconst useStyles = makeStyles({\n  card: {\n    marginTop: 50,\n    margin: '0 auto',\n    maxWidth: 600\n  },\n  form: {\n    display: 'flex',\n    flexDirection: 'column',\n    justifyContent: 'space-between'\n  },\n  input: {\n    marginBottom: 30,\n    width: '100%'\n  },\n  buttons: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center'\n  },\n  title: {\n    textAlign: 'center'\n  },\n  text: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center',\n    marginBottom: 20\n  },\n  link: {\n    marginLeft: 10,\n    color: blue[800],\n    '&:hover': {\n      color: orange[800],\n      cursor: 'pointer',\n      textDecoration: 'underline'\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'row',\n      alignItems: 'center',\n      justifyContent: 'center',\n      '&:p': {\n        display: 'inline-block'\n      }\n    }\n  }\n});\n\nexport default useStyles;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { makeStyles } from '@material-ui/core/styles';\nimport blue from '@material-ui/core/colors/blue';\nimport orange from '@material-ui/core/colors/orange';\nconst useStyles = makeStyles({\n  card: {\n    marginTop: 50,\n    margin: '0 auto',\n    maxWidth: 600\n  },\n  form: {\n    display: 'flex',\n    flexDirection: 'column',\n    justifyContent: 'space-between'\n  },\n  input: {\n    marginBottom: 30,\n    width: '100%'\n  },\n  buttons: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center'\n  },\n  title: {\n    textAlign: 'center'\n  },\n  text: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center',\n    marginBottom: 20\n  },\n  link: {\n    marginLeft: 10,\n    color: blue[800],\n    '&:hover': {\n      color: orange[800],\n      cursor: 'pointer',\n      textDecoration: 'underline'\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'row',\n      alignItems: 'center',\n      justifyContent: 'center',\n      '&:p': {\n        display: 'inline-block'\n      }\n    }\n  }\n});\nexport default useStyles;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/components/Form/style.js"
+    ],
+    "names": [
+      "makeStyles",
+      "blue",
+      "orange",
+      "useStyles",
+      "card",
+      "marginTop",
+      "margin",
+      "maxWidth",
+      "form",
+      "display",
+      "flexDirection",
+      "justifyContent",
+      "input",
+      "marginBottom",
+      "width",
+      "buttons",
+      "title",
+      "textAlign",
+      "text",
+      "link",
+      "marginLeft",
+      "color",
+      "cursor",
+      "textDecoration",
+      "container",
+      "alignItems"
+    ],
+    "mappings": "AAAA,SAASA,UAAT,QAA2B,0BAA3B;AACA,OAAOC,IAAP,MAAiB,+BAAjB;AACA,OAAOC,MAAP,MAAmB,iCAAnB;AAEA,MAAMC,SAAS,GAAGH,UAAU,CAAC;AAC3BI,EAAAA,IAAI,EAAE;AACJC,IAAAA,SAAS,EAAE,EADP;AAEJC,IAAAA,MAAM,EAAE,QAFJ;AAGJC,IAAAA,QAAQ,EAAE;AAHN,GADqB;AAM3BC,EAAAA,IAAI,EAAE;AACJC,IAAAA,OAAO,EAAE,MADL;AAEJC,IAAAA,aAAa,EAAE,QAFX;AAGJC,IAAAA,cAAc,EAAE;AAHZ,GANqB;AAW3BC,EAAAA,KAAK,EAAE;AACLC,IAAAA,YAAY,EAAE,EADT;AAELC,IAAAA,KAAK,EAAE;AAFF,GAXoB;AAe3BC,EAAAA,OAAO,EAAE;AACPD,IAAAA,KAAK,EAAE,MADA;AAEPL,IAAAA,OAAO,EAAE,MAFF;AAGPE,IAAAA,cAAc,EAAE;AAHT,GAfkB;AAoB3BK,EAAAA,KAAK,EAAE;AACLC,IAAAA,SAAS,EAAE;AADN,GApBoB;AAuB3BC,EAAAA,IAAI,EAAE;AACJJ,IAAAA,KAAK,EAAE,MADH;AAEJL,IAAAA,OAAO,EAAE,MAFL;AAGJE,IAAAA,cAAc,EAAE,QAHZ;AAIJE,IAAAA,YAAY,EAAE;AAJV,GAvBqB;AA6B3BM,EAAAA,IAAI,EAAE;AACJC,IAAAA,UAAU,EAAE,EADR;AAEJC,IAAAA,KAAK,EAAEpB,IAAI,CAAC,GAAD,CAFP;AAGJ,eAAW;AACToB,MAAAA,KAAK,EAAEnB,MAAM,CAAC,GAAD,CADJ;AAEToB,MAAAA,MAAM,EAAE,SAFC;AAGTC,MAAAA,cAAc,EAAE;AAHP,KAHP;AAQJC,IAAAA,SAAS,EAAE;AACTf,MAAAA,OAAO,EAAE,MADA;AAETC,MAAAA,aAAa,EAAE,KAFN;AAGTe,MAAAA,UAAU,EAAE,QAHH;AAITd,MAAAA,cAAc,EAAE,QAJP;AAKT,aAAO;AACLF,QAAAA,OAAO,EAAE;AADJ;AALE;AARP;AA7BqB,CAAD,CAA5B;AAiDA,eAAeN,SAAf",
+    "sourcesContent": [
+      "import { makeStyles } from '@material-ui/core/styles';\nimport blue from '@material-ui/core/colors/blue';\nimport orange from '@material-ui/core/colors/orange';\n\nconst useStyles = makeStyles({\n  card: {\n    marginTop: 50,\n    margin: '0 auto',\n    maxWidth: 600\n  },\n  form: {\n    display: 'flex',\n    flexDirection: 'column',\n    justifyContent: 'space-between'\n  },\n  input: {\n    marginBottom: 30,\n    width: '100%'\n  },\n  buttons: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center'\n  },\n  title: {\n    textAlign: 'center'\n  },\n  text: {\n    width: '100%',\n    display: 'flex',\n    justifyContent: 'center',\n    marginBottom: 20\n  },\n  link: {\n    marginLeft: 10,\n    color: blue[800],\n    '&:hover': {\n      color: orange[800],\n      cursor: 'pointer',\n      textDecoration: 'underline'\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'row',\n      alignItems: 'center',\n      justifyContent: 'center',\n      '&:p': {\n        display: 'inline-block'\n      }\n    }\n  }\n});\n\nexport default useStyles;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

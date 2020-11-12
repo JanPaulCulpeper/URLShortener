@@ -1,1 +1,31 @@
-{"ast":null,"code":"var _regeneratorRuntime = require(\"@babel/runtime/regenerator\");\n\nvar _asyncToGenerator = require(\"@babel/runtime/helpers/asyncToGenerator\");\n\nvar mongoose = require('mongoose'); // un:teamj@gmail.com\n// pw:inso4116\n\n\nvar connectDB = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {\n    return _regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 3;\n            return mongoose.connect(process.env.MONGO_URI, {\n              useNewUrlParser: true,\n              useUnifiedTopology: true,\n              useFindAndModify: false\n            });\n\n          case 3:\n            _context.next = 8;\n            break;\n\n          case 5:\n            _context.prev = 5;\n            _context.t0 = _context[\"catch\"](0);\n            process.exit(1);\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, null, [[0, 5]]);\n  }));\n\n  return function connectDB() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nmodule.exports = connectDB;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/services/db.js"],"names":["mongoose","require","connectDB","connect","process","env","MONGO_URI","useNewUrlParser","useUnifiedTopology","useFindAndModify","exit","module","exports"],"mappings":";;;;AAAA,IAAMA,QAAQ,GAAGC,OAAO,CAAC,UAAD,CAAxB,C,CAEA;AACA;;;AAEA,IAAMC,SAAS;AAAA,sEAAG;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAERF,QAAQ,CAACG,OAAT,CAAiBC,OAAO,CAACC,GAAR,CAAYC,SAA7B,EAAwC;AAC5CC,cAAAA,eAAe,EAAE,IAD2B;AAE5CC,cAAAA,kBAAkB,EAAE,IAFwB;AAG5CC,cAAAA,gBAAgB,EAAE;AAH0B,aAAxC,CAFQ;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAQdL,YAAAA,OAAO,CAACM,IAAR,CAAa,CAAb;;AARc;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAH;;AAAA,kBAATR,SAAS;AAAA;AAAA;AAAA,GAAf;;AAYAS,MAAM,CAACC,OAAP,GAAiBV,SAAjB","sourcesContent":["const mongoose = require('mongoose');\n\n// un:teamj@gmail.com\n// pw:inso4116\n\nconst connectDB = async () => {\n  try {\n    await mongoose.connect(process.env.MONGO_URI, {\n      useNewUrlParser: true,\n      useUnifiedTopology: true,\n      useFindAndModify: false\n    });\n  } catch (err) {\n    process.exit(1);\n  }\n};\n\nmodule.exports = connectDB;\n"]},"metadata":{},"sourceType":"script"}
+{
+  "ast": null,
+  "code": "var _regeneratorRuntime = require(\"@babel/runtime/regenerator\");\n\nvar _asyncToGenerator = require(\"@babel/runtime/helpers/asyncToGenerator\");\n\nvar mongoose = require('mongoose'); // un:teamj@gmail.com\n// pw:inso4116\n\n\nvar connectDB = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {\n    return _regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 3;\n            return mongoose.connect(process.env.MONGO_URI, {\n              useNewUrlParser: true,\n              useUnifiedTopology: true,\n              useFindAndModify: false\n            });\n\n          case 3:\n            _context.next = 8;\n            break;\n\n          case 5:\n            _context.prev = 5;\n            _context.t0 = _context[\"catch\"](0);\n            process.exit(1);\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, null, [[0, 5]]);\n  }));\n\n  return function connectDB() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nmodule.exports = connectDB;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/services/db.js"
+    ],
+    "names": [
+      "mongoose",
+      "require",
+      "connectDB",
+      "connect",
+      "process",
+      "env",
+      "MONGO_URI",
+      "useNewUrlParser",
+      "useUnifiedTopology",
+      "useFindAndModify",
+      "exit",
+      "module",
+      "exports"
+    ],
+    "mappings": ";;;;AAAA,IAAMA,QAAQ,GAAGC,OAAO,CAAC,UAAD,CAAxB,C,CAEA;AACA;;;AAEA,IAAMC,SAAS;AAAA,sEAAG;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAERF,QAAQ,CAACG,OAAT,CAAiBC,OAAO,CAACC,GAAR,CAAYC,SAA7B,EAAwC;AAC5CC,cAAAA,eAAe,EAAE,IAD2B;AAE5CC,cAAAA,kBAAkB,EAAE,IAFwB;AAG5CC,cAAAA,gBAAgB,EAAE;AAH0B,aAAxC,CAFQ;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAQdL,YAAAA,OAAO,CAACM,IAAR,CAAa,CAAb;;AARc;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAH;;AAAA,kBAATR,SAAS;AAAA;AAAA;AAAA,GAAf;;AAYAS,MAAM,CAACC,OAAP,GAAiBV,SAAjB",
+    "sourcesContent": [
+      "const mongoose = require('mongoose');\n\n// un:teamj@gmail.com\n// pw:inso4116\n\nconst connectDB = async () => {\n  try {\n    await mongoose.connect(process.env.MONGO_URI, {\n      useNewUrlParser: true,\n      useUnifiedTopology: true,\n      useFindAndModify: false\n    });\n  } catch (err) {\n    process.exit(1);\n  }\n};\n\nmodule.exports = connectDB;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

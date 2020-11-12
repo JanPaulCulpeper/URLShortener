@@ -1,1 +1,29 @@
-{"ast":null,"code":"var _require = require('express'),\n    Router = _require.Router;\n\nvar _require2 = require('../controllers/auth'),\n    verifyAuth = _require2.verifyAuth,\n    signupPost = _require2.signupPost,\n    loginPost = _require2.loginPost,\n    logoutGet = _require2.logoutGet;\n\nvar router = Router();\nrouter.post('/signup', signupPost);\nrouter.post('/login', loginPost);\nrouter.get('/verify', verifyAuth);\nrouter.get('/logout', logoutGet);\nmodule.exports = router;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/routes/auth.js"],"names":["require","Router","verifyAuth","signupPost","loginPost","logoutGet","router","post","get","module","exports"],"mappings":"eAAmBA,OAAO,CAAC,SAAD,C;IAAlBC,M,YAAAA,M;;gBAMJD,OAAO,CAAC,qBAAD,C;IAJTE,U,aAAAA,U;IACAC,U,aAAAA,U;IACAC,S,aAAAA,S;IACAC,S,aAAAA,S;;AAGF,IAAMC,MAAM,GAAGL,MAAM,EAArB;AAEAK,MAAM,CAACC,IAAP,CAAY,SAAZ,EAAuBJ,UAAvB;AACAG,MAAM,CAACC,IAAP,CAAY,QAAZ,EAAsBH,SAAtB;AACAE,MAAM,CAACE,GAAP,CAAW,SAAX,EAAsBN,UAAtB;AACAI,MAAM,CAACE,GAAP,CAAW,SAAX,EAAsBH,SAAtB;AAEAI,MAAM,CAACC,OAAP,GAAiBJ,MAAjB","sourcesContent":["const { Router } = require('express');\nconst {\n  verifyAuth,\n  signupPost,\n  loginPost,\n  logoutGet\n} = require('../controllers/auth');\n\nconst router = Router();\n\nrouter.post('/signup', signupPost);\nrouter.post('/login', loginPost);\nrouter.get('/verify', verifyAuth);\nrouter.get('/logout', logoutGet);\n\nmodule.exports = router;\n"]},"metadata":{},"sourceType":"script"}
+{
+  "ast": null,
+  "code": "var _require = require('express'),\n    Router = _require.Router;\n\nvar _require2 = require('../controllers/auth'),\n    verifyAuth = _require2.verifyAuth,\n    signupPost = _require2.signupPost,\n    loginPost = _require2.loginPost,\n    logoutGet = _require2.logoutGet;\n\nvar router = Router();\nrouter.post('/signup', signupPost);\nrouter.post('/login', loginPost);\nrouter.get('/verify', verifyAuth);\nrouter.get('/logout', logoutGet);\nmodule.exports = router;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/routes/auth.js"
+    ],
+    "names": [
+      "require",
+      "Router",
+      "verifyAuth",
+      "signupPost",
+      "loginPost",
+      "logoutGet",
+      "router",
+      "post",
+      "get",
+      "module",
+      "exports"
+    ],
+    "mappings": "eAAmBA,OAAO,CAAC,SAAD,C;IAAlBC,M,YAAAA,M;;gBAMJD,OAAO,CAAC,qBAAD,C;IAJTE,U,aAAAA,U;IACAC,U,aAAAA,U;IACAC,S,aAAAA,S;IACAC,S,aAAAA,S;;AAGF,IAAMC,MAAM,GAAGL,MAAM,EAArB;AAEAK,MAAM,CAACC,IAAP,CAAY,SAAZ,EAAuBJ,UAAvB;AACAG,MAAM,CAACC,IAAP,CAAY,QAAZ,EAAsBH,SAAtB;AACAE,MAAM,CAACE,GAAP,CAAW,SAAX,EAAsBN,UAAtB;AACAI,MAAM,CAACE,GAAP,CAAW,SAAX,EAAsBH,SAAtB;AAEAI,MAAM,CAACC,OAAP,GAAiBJ,MAAjB",
+    "sourcesContent": [
+      "const { Router } = require('express');\nconst {\n  verifyAuth,\n  signupPost,\n  loginPost,\n  logoutGet\n} = require('../controllers/auth');\n\nconst router = Router();\n\nrouter.post('/signup', signupPost);\nrouter.post('/login', loginPost);\nrouter.get('/verify', verifyAuth);\nrouter.get('/logout', logoutGet);\n\nmodule.exports = router;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

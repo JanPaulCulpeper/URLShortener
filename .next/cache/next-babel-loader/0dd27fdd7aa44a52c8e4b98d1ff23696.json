@@ -1,1 +1,25 @@
-{"ast":null,"code":"import { combineReducers } from 'redux';\nimport authReducer from './auth';\nimport userReducer from './user';\nimport urlReducer from './url';\nexport default combineReducers({\n  auth: authReducer,\n  user: userReducer,\n  url: urlReducer\n});","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/store/reducers/index.js"],"names":["combineReducers","authReducer","userReducer","urlReducer","auth","user","url"],"mappings":"AAAA,SAASA,eAAT,QAAgC,OAAhC;AAEA,OAAOC,WAAP,MAAwB,QAAxB;AACA,OAAOC,WAAP,MAAwB,QAAxB;AACA,OAAOC,UAAP,MAAuB,OAAvB;AAEA,eAAeH,eAAe,CAAC;AAC7BI,EAAAA,IAAI,EAAEH,WADuB;AAE7BI,EAAAA,IAAI,EAAEH,WAFuB;AAG7BI,EAAAA,GAAG,EAAEH;AAHwB,CAAD,CAA9B","sourcesContent":["import { combineReducers } from 'redux';\n\nimport authReducer from './auth';\nimport userReducer from './user';\nimport urlReducer from './url';\n\nexport default combineReducers({\n  auth: authReducer,\n  user: userReducer,\n  url: urlReducer\n});\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { combineReducers } from 'redux';\nimport authReducer from './auth';\nimport userReducer from './user';\nimport urlReducer from './url';\nexport default combineReducers({\n  auth: authReducer,\n  user: userReducer,\n  url: urlReducer\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/store/reducers/index.js"
+    ],
+    "names": [
+      "combineReducers",
+      "authReducer",
+      "userReducer",
+      "urlReducer",
+      "auth",
+      "user",
+      "url"
+    ],
+    "mappings": "AAAA,SAASA,eAAT,QAAgC,OAAhC;AAEA,OAAOC,WAAP,MAAwB,QAAxB;AACA,OAAOC,WAAP,MAAwB,QAAxB;AACA,OAAOC,UAAP,MAAuB,OAAvB;AAEA,eAAeH,eAAe,CAAC;AAC7BI,EAAAA,IAAI,EAAEH,WADuB;AAE7BI,EAAAA,IAAI,EAAEH,WAFuB;AAG7BI,EAAAA,GAAG,EAAEH;AAHwB,CAAD,CAA9B",
+    "sourcesContent": [
+      "import { combineReducers } from 'redux';\n\nimport authReducer from './auth';\nimport userReducer from './user';\nimport urlReducer from './url';\n\nexport default combineReducers({\n  auth: authReducer,\n  user: userReducer,\n  url: urlReducer\n});\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

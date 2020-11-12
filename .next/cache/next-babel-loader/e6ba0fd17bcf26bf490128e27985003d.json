@@ -1,1 +1,17 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\n\nvar Shortening = function Shortening() {\n  return __jsx(\"div\", null, \" \");\n};\n\n_c = Shortening;\nexport default Shortening;\n\nvar _c;\n\n$RefreshReg$(_c, \"Shortening\");","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/components/Shortening/index.js"],"names":["React","Shortening"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAEA,IAAMC,UAAU,GAAG,SAAbA,UAAa,GAAM;AACvB,SAAO,uBAAP;AACD,CAFD;;KAAMA,U;AAIN,eAAeA,UAAf","sourcesContent":["import React from 'react';\n\nconst Shortening = () => {\n  return <div> </div>;\n};\n\nexport default Shortening;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\n\nvar Shortening = function Shortening() {\n  return __jsx(\"div\", null, \" \");\n};\n\n_c = Shortening;\nexport default Shortening;\n\nvar _c;\n\n$RefreshReg$(_c, \"Shortening\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/components/Shortening/index.js"
+    ],
+    "names": ["React", "Shortening"],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAEA,IAAMC,UAAU,GAAG,SAAbA,UAAa,GAAM;AACvB,SAAO,uBAAP;AACD,CAFD;;KAAMA,U;AAIN,eAAeA,UAAf",
+    "sourcesContent": [
+      "import React from 'react';\n\nconst Shortening = () => {\n  return <div> </div>;\n};\n\nexport default Shortening;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
