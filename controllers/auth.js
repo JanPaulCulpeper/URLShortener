@@ -11,7 +11,9 @@ const handleErrors = (err) => {
     errors.password = 'The password you entered is incorrect';
   }
   if (err.code === 11000) {
-    errors.email = 'The email you entered is already registered';
+    if (err.keyPattern) {
+      errors.userName = 'The username you entered is already in use!';
+    } else errors.email = 'The email you entered is already registered!';
   }
   if (err.message.includes('user validation failed')) {
     Object.values(err.errors).forEach(({ properties }) => {
@@ -65,11 +67,13 @@ const verifyAuth = async (req, res) => {
   const token = req.cookies.urlshort;
 
   if (token) {
-    jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
+    jwt.verify(token, process.env.JWT_SECRET, async (err, decodedToken) => {
       if (err) {
         res.json({ user: null });
       } else {
-        res.status(200).json({ user: decodedToken.id });
+        const user = await User.findOne({ _id: decodedToken.id });
+
+        res.status(200).json({ user });
       }
     });
   } else {

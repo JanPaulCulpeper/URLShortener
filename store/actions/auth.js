@@ -5,7 +5,7 @@ const { AUTH_ACTION_FAILED, AUTH, AUTH_LOADING } = authTypes;
 export const verifyAuth = () => async (dispatch) => {
   dispatch({ type: AUTH_LOADING });
   try {
-    const res = await fetch('http://localhost:5000/api/auth/verify');
+    const res = await fetch('http://localhost:3000/api/auth/verify');
     dispatch({ type: AUTH, payload: (await res.json()).user });
   } catch (err) {
     dispatch({
@@ -18,7 +18,7 @@ export const verifyAuth = () => async (dispatch) => {
 export const login = (credentials) => async (dispatch) => {
   dispatch({ type: AUTH_LOADING });
   try {
-    const res = await fetch('http://localhost:5000/api/auth/login', {
+    const res = await fetch('http://localhost:3000/api/auth/login', {
       method: 'POST',
       body: JSON.stringify(credentials),
       headers: { 'Content-Type': 'application/json' }
@@ -39,7 +39,7 @@ export const login = (credentials) => async (dispatch) => {
 export const signup = ({ email, password, userName }) => async (dispatch) => {
   dispatch({ type: AUTH_LOADING });
   try {
-    const res = await fetch('http://localhost:5000/api/auth/signup', {
+    const res = await fetch('http://localhost:3000/api/auth/signup', {
       method: 'POST',
       body: JSON.stringify({ email, password, userName }),
       headers: { 'Content-Type': 'application/json' }
@@ -59,7 +59,7 @@ export const signup = ({ email, password, userName }) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   try {
-    const res = await fetch('http://localhost:5000/api/auth/logout');
+    const res = await fetch('http://localhost:3000/api/auth/logout');
 
     const data = await res.json();
 
@@ -71,4 +71,8 @@ export const logout = () => async (dispatch) => {
   } catch (err) {
     dispatch({ type: AUTH_ACTION_FAILED, payload: err });
   }
+};
+
+export const clearError = () => (dispatch) => {
+  dispatch({ type: AUTH_ACTION_FAILED, payload: null });
 };

@@ -1,1 +1,42 @@
-{"ast":null,"code":"import { urlTypes } from './types';\nconst {\n  SHORTEN_ERROR,\n  SHORTEN_LOADING,\n  SHORTEN_URL_SUCCESS,\n  FETCH_URLS_SUCCESS\n} = urlTypes;\nexport const shorten = ({\n  url,\n  custom,\n  id\n}) => async dispatch => {\n  dispatch({\n    type: SHORTEN_LOADING\n  });\n\n  try {\n    const res = await fetch('http://localhost:5000/api/url/create', {\n      method: 'POST',\n      body: JSON.stringify({\n        url,\n        custom,\n        id\n      }),\n      headers: {\n        'Content-Type': 'application/json'\n      }\n    });\n    const data = await res.json();\n    dispatch({\n      type: SHORTEN_URL_SUCCESS,\n      payload: data\n    });\n  } catch (err) {\n    dispatch({\n      type: SHORTEN_ERROR,\n      payload: err\n    });\n  }\n};\nexport const fetchUrls = () => dispatch => {\n  dispatch({\n    type: SHORTEN_LOADING\n  });\n};\nexport const remove = () => {};","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/store/actions/url.js"],"names":["urlTypes","SHORTEN_ERROR","SHORTEN_LOADING","SHORTEN_URL_SUCCESS","FETCH_URLS_SUCCESS","shorten","url","custom","id","dispatch","type","res","fetch","method","body","JSON","stringify","headers","data","json","payload","err","fetchUrls","remove"],"mappings":"AAAA,SAASA,QAAT,QAAyB,SAAzB;AAEA,MAAM;AACJC,EAAAA,aADI;AAEJC,EAAAA,eAFI;AAGJC,EAAAA,mBAHI;AAIJC,EAAAA;AAJI,IAKFJ,QALJ;AAOA,OAAO,MAAMK,OAAO,GAAG,CAAC;AAAEC,EAAAA,GAAF;AAAOC,EAAAA,MAAP;AAAeC,EAAAA;AAAf,CAAD,KAAyB,MAAOC,QAAP,IAAoB;AAClEA,EAAAA,QAAQ,CAAC;AAAEC,IAAAA,IAAI,EAAER;AAAR,GAAD,CAAR;;AACA,MAAI;AACF,UAAMS,GAAG,GAAG,MAAMC,KAAK,CAAC,sCAAD,EAAyC;AAC9DC,MAAAA,MAAM,EAAE,MADsD;AAE9DC,MAAAA,IAAI,EAAEC,IAAI,CAACC,SAAL,CAAe;AAAEV,QAAAA,GAAF;AAAOC,QAAAA,MAAP;AAAeC,QAAAA;AAAf,OAAf,CAFwD;AAG9DS,MAAAA,OAAO,EAAE;AAAE,wBAAgB;AAAlB;AAHqD,KAAzC,CAAvB;AAKA,UAAMC,IAAI,GAAG,MAAMP,GAAG,CAACQ,IAAJ,EAAnB;AAEAV,IAAAA,QAAQ,CAAC;AAAEC,MAAAA,IAAI,EAAEP,mBAAR;AAA6BiB,MAAAA,OAAO,EAAEF;AAAtC,KAAD,CAAR;AACD,GATD,CASE,OAAOG,GAAP,EAAY;AACZZ,IAAAA,QAAQ,CAAC;AAAEC,MAAAA,IAAI,EAAET,aAAR;AAAuBmB,MAAAA,OAAO,EAAEC;AAAhC,KAAD,CAAR;AACD;AACF,CAdM;AAgBP,OAAO,MAAMC,SAAS,GAAG,MAAOb,QAAD,IAAc;AAC3CA,EAAAA,QAAQ,CAAC;AAAEC,IAAAA,IAAI,EAAER;AAAR,GAAD,CAAR;AACD,CAFM;AAIP,OAAO,MAAMqB,MAAM,GAAG,MAAM,CAAE,CAAvB","sourcesContent":["import { urlTypes } from './types';\n\nconst {\n  SHORTEN_ERROR,\n  SHORTEN_LOADING,\n  SHORTEN_URL_SUCCESS,\n  FETCH_URLS_SUCCESS\n} = urlTypes;\n\nexport const shorten = ({ url, custom, id }) => async (dispatch) => {\n  dispatch({ type: SHORTEN_LOADING });\n  try {\n    const res = await fetch('http://localhost:5000/api/url/create', {\n      method: 'POST',\n      body: JSON.stringify({ url, custom, id }),\n      headers: { 'Content-Type': 'application/json' }\n    });\n    const data = await res.json();\n\n    dispatch({ type: SHORTEN_URL_SUCCESS, payload: data });\n  } catch (err) {\n    dispatch({ type: SHORTEN_ERROR, payload: err });\n  }\n};\n\nexport const fetchUrls = () => (dispatch) => {\n  dispatch({ type: SHORTEN_LOADING });\n};\n\nexport const remove = () => {};\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { urlTypes } from './types';\nconst {\n  SHORTEN_ERROR,\n  SHORTEN_LOADING,\n  SHORTEN_URL_SUCCESS,\n  FETCH_URLS_SUCCESS\n} = urlTypes;\nexport const shorten = ({\n  url,\n  custom,\n  id\n}) => async dispatch => {\n  dispatch({\n    type: SHORTEN_LOADING\n  });\n\n  try {\n    const res = await fetch('http://localhost:5000/api/url/create', {\n      method: 'POST',\n      body: JSON.stringify({\n        url,\n        custom,\n        id\n      }),\n      headers: {\n        'Content-Type': 'application/json'\n      }\n    });\n    const data = await res.json();\n    dispatch({\n      type: SHORTEN_URL_SUCCESS,\n      payload: data\n    });\n  } catch (err) {\n    dispatch({\n      type: SHORTEN_ERROR,\n      payload: err\n    });\n  }\n};\nexport const fetchUrls = () => dispatch => {\n  dispatch({\n    type: SHORTEN_LOADING\n  });\n};\nexport const remove = () => {};",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/store/actions/url.js"
+    ],
+    "names": [
+      "urlTypes",
+      "SHORTEN_ERROR",
+      "SHORTEN_LOADING",
+      "SHORTEN_URL_SUCCESS",
+      "FETCH_URLS_SUCCESS",
+      "shorten",
+      "url",
+      "custom",
+      "id",
+      "dispatch",
+      "type",
+      "res",
+      "fetch",
+      "method",
+      "body",
+      "JSON",
+      "stringify",
+      "headers",
+      "data",
+      "json",
+      "payload",
+      "err",
+      "fetchUrls",
+      "remove"
+    ],
+    "mappings": "AAAA,SAASA,QAAT,QAAyB,SAAzB;AAEA,MAAM;AACJC,EAAAA,aADI;AAEJC,EAAAA,eAFI;AAGJC,EAAAA,mBAHI;AAIJC,EAAAA;AAJI,IAKFJ,QALJ;AAOA,OAAO,MAAMK,OAAO,GAAG,CAAC;AAAEC,EAAAA,GAAF;AAAOC,EAAAA,MAAP;AAAeC,EAAAA;AAAf,CAAD,KAAyB,MAAOC,QAAP,IAAoB;AAClEA,EAAAA,QAAQ,CAAC;AAAEC,IAAAA,IAAI,EAAER;AAAR,GAAD,CAAR;;AACA,MAAI;AACF,UAAMS,GAAG,GAAG,MAAMC,KAAK,CAAC,sCAAD,EAAyC;AAC9DC,MAAAA,MAAM,EAAE,MADsD;AAE9DC,MAAAA,IAAI,EAAEC,IAAI,CAACC,SAAL,CAAe;AAAEV,QAAAA,GAAF;AAAOC,QAAAA,MAAP;AAAeC,QAAAA;AAAf,OAAf,CAFwD;AAG9DS,MAAAA,OAAO,EAAE;AAAE,wBAAgB;AAAlB;AAHqD,KAAzC,CAAvB;AAKA,UAAMC,IAAI,GAAG,MAAMP,GAAG,CAACQ,IAAJ,EAAnB;AAEAV,IAAAA,QAAQ,CAAC;AAAEC,MAAAA,IAAI,EAAEP,mBAAR;AAA6BiB,MAAAA,OAAO,EAAEF;AAAtC,KAAD,CAAR;AACD,GATD,CASE,OAAOG,GAAP,EAAY;AACZZ,IAAAA,QAAQ,CAAC;AAAEC,MAAAA,IAAI,EAAET,aAAR;AAAuBmB,MAAAA,OAAO,EAAEC;AAAhC,KAAD,CAAR;AACD;AACF,CAdM;AAgBP,OAAO,MAAMC,SAAS,GAAG,MAAOb,QAAD,IAAc;AAC3CA,EAAAA,QAAQ,CAAC;AAAEC,IAAAA,IAAI,EAAER;AAAR,GAAD,CAAR;AACD,CAFM;AAIP,OAAO,MAAMqB,MAAM,GAAG,MAAM,CAAE,CAAvB",
+    "sourcesContent": [
+      "import { urlTypes } from './types';\n\nconst {\n  SHORTEN_ERROR,\n  SHORTEN_LOADING,\n  SHORTEN_URL_SUCCESS,\n  FETCH_URLS_SUCCESS\n} = urlTypes;\n\nexport const shorten = ({ url, custom, id }) => async (dispatch) => {\n  dispatch({ type: SHORTEN_LOADING });\n  try {\n    const res = await fetch('http://localhost:5000/api/url/create', {\n      method: 'POST',\n      body: JSON.stringify({ url, custom, id }),\n      headers: { 'Content-Type': 'application/json' }\n    });\n    const data = await res.json();\n\n    dispatch({ type: SHORTEN_URL_SUCCESS, payload: data });\n  } catch (err) {\n    dispatch({ type: SHORTEN_ERROR, payload: err });\n  }\n};\n\nexport const fetchUrls = () => (dispatch) => {\n  dispatch({ type: SHORTEN_LOADING });\n};\n\nexport const remove = () => {};\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

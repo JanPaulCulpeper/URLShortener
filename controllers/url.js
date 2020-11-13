@@ -1,8 +1,10 @@
 const Url = require('../models/url');
 
 const createShorturl = async (req, res) => {
-  const { id, url, custom } = req.body;
+  const { url, custom } = req.body;
   const { userId } = req;
+
+  if (!url || !custom) res.status(400).json('Cannot have empty fields!');
 
   const urlDoc = await Url.findOne({ userID: userId });
 
@@ -11,9 +13,12 @@ const createShorturl = async (req, res) => {
       URLS: { ...urlDoc.URLS, [custom]: url }
     };
     await Url.findByIdAndUpdate({ _id: urlDoc._id }, update);
-    res.status(200).json(update);
+    res.status(201).json(update);
   } else {
-    const newUrl = await Url.create({ userID: id, URLS: { [custom]: url } });
+    const newUrl = await Url.create({
+      userID: userId,
+      URLS: { [custom]: url }
+    });
     res.status(201).json(newUrl);
   }
 };
@@ -38,7 +43,7 @@ const deleteUrl = async (req, res) => {
     const update = {
       URLS: { ...urlDoc.URLS }
     };
-    console.log(urlDoc);
+
     await Url.findByIdAndUpdate({ _id: urlDoc._id }, update);
     res.status(200).json(urlDoc.URLS);
   } else {

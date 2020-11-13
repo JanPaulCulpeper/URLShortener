@@ -1,1 +1,17 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\n\nconst Dashboard = () => {\n  return __jsx(\"div\", null, \" This is the dashboard \");\n};\n\nexport default Dashboard;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/dashboard.js"],"names":["React","Dashboard"],"mappings":";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAEA,MAAMC,SAAS,GAAG,MAAM;AACtB,SAAO,6CAAP;AACD,CAFD;;AAIA,eAAeA,SAAf","sourcesContent":["import React from 'react';\n\nconst Dashboard = () => {\n  return <div> This is the dashboard </div>;\n};\n\nexport default Dashboard;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\n\nconst Dashboard = () => {\n  return __jsx(\"div\", null, \" This is the dashboard \");\n};\n\nexport default Dashboard;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/dashboard.js"
+    ],
+    "names": ["React", "Dashboard"],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAEA,MAAMC,SAAS,GAAG,MAAM;AACtB,SAAO,6CAAP;AACD,CAFD;;AAIA,eAAeA,SAAf",
+    "sourcesContent": [
+      "import React from 'react';\n\nconst Dashboard = () => {\n  return <div> This is the dashboard </div>;\n};\n\nexport default Dashboard;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

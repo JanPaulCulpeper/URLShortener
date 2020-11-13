@@ -8,6 +8,7 @@ import { authActions } from '../store/actions';
 import store from '../services/redux';
 import '../app.css';
 import 'fontsource-roboto';
+import 'react-toastify/dist/ReactToastify.css';
 
 const theme = {};
 

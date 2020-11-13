@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import Navigation from '../components/Navigation';
 import { authSelectors, urlSelectors } from '../store/selectors';
@@ -18,19 +18,20 @@ const Home = () => {
   const { url, custom } = values;
   const [current, setCurrent] = React.useState(null);
   const loading = useSelector(authSelectors.selectLoading);
+  const urlError = useSelector(urlSelectors.selectError);
 
   const handleSubmit = React.useCallback(
     (e) => {
       e.preventDefault();
       setCurrent(custom);
-      if (authToken)
+      if (authToken) {
         dispatch(
           urlActions.shorten({
             custom,
-            url,
-            id: authToken._id
+            url
           })
         );
+      }
     },
     [values, current]
   );
@@ -39,12 +40,17 @@ const Home = () => {
     dispatch(authActions.logout());
   }, [dispatch, authActions]);
 
+  React.useEffect(() => {
+    if (urlError) toast(urlError, { type: 'error' });
+  }, [urlError]);
+
   return (
     <>
       {!authToken && loading ? (
         'Loading...'
       ) : (
         <>
+          <ToastContainer />
           <Navigation
             Title="URL-shortener"
             Links={[
@@ -61,7 +67,7 @@ const Home = () => {
                       },
                       { name: 'Logout', act: Logout }
                     ]}
-                    Letter={authToken ? authToken.userName[0] : null}
+                    Letter={authToken?.userName[0]}
                   />
                 )
               }

@@ -1,1 +1,34 @@
-{"ast":null,"code":"var _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React from 'react';\nimport { useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\nimport UserIcon from '../components/UserIcon';\n\nvar Dashboard = function Dashboard() {\n  _s();\n\n  var authToken = useSelector(authSelectors.selectAuthToken);\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"URL-shortener\",\n    Links: [{\n      title: 'Login',\n      ref: '/login',\n      condition: !!authToken,\n      replacement: __jsx(UserIcon, {\n        Actions: [{\n          name: 'Dashboard',\n          act: function act() {}\n        }, {\n          name: 'Logout',\n          act: Logout\n        }],\n        Letter: authToken ? authToken.userName[0] : null\n      })\n    }]\n  }), __jsx(\"div\", null, \" This is the dashboard \"), \";\");\n};\n\n_s(Dashboard, \"4nbP1NPoVN+NqRqUhW7/mqHfHlg=\", false, function () {\n  return [useSelector];\n});\n\n_c = Dashboard;\nexport default Dashboard;\n\nvar _c;\n\n$RefreshReg$(_c, \"Dashboard\");","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/pages/dashboard.js"],"names":["React","useSelector","Navigation","authSelectors","UserIcon","Dashboard","authToken","selectAuthToken","title","ref","condition","replacement","name","act","Logout","userName"],"mappings":";;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,WAAT,QAA4B,aAA5B;AACA,OAAOC,UAAP,MAAuB,0BAAvB;AACA,SAASC,aAAT,QAA8B,oBAA9B;AACA,OAAOC,QAAP,MAAqB,wBAArB;;AAEA,IAAMC,SAAS,GAAG,SAAZA,SAAY,GAAM;AAAA;;AACtB,MAAMC,SAAS,GAAGL,WAAW,CAACE,aAAa,CAACI,eAAf,CAA7B;AACA,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,eADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEC,MAAAA,KAAK,EAAE,OADT;AAEEC,MAAAA,GAAG,EAAE,QAFP;AAGEC,MAAAA,SAAS,EAAE,CAAC,CAACJ,SAHf;AAIEK,MAAAA,WAAW,EACT,MAAC,QAAD;AACE,QAAA,OAAO,EAAE,CACP;AAAEC,UAAAA,IAAI,EAAE,WAAR;AAAqBC,UAAAA,GAAG,EAAE,eAAM,CAAE;AAAlC,SADO,EAEP;AAAED,UAAAA,IAAI,EAAE,QAAR;AAAkBC,UAAAA,GAAG,EAAEC;AAAvB,SAFO,CADX;AAKE,QAAA,MAAM,EAAER,SAAS,GAAGA,SAAS,CAACS,QAAV,CAAmB,CAAnB,CAAH,GAA2B;AAL9C;AALJ,KADK;AAFT,IADF,EAoBE,6CApBF,MADF;AAwBD,CA1BD;;GAAMV,S;UACcJ,W;;;KADdI,S;AA4BN,eAAeA,SAAf","sourcesContent":["import React from 'react';\nimport { useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\nimport UserIcon from '../components/UserIcon';\n\nconst Dashboard = () => {\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  return (\n    <>\n      <Navigation\n        Title=\"URL-shortener\"\n        Links={[\n          {\n            title: 'Login',\n            ref: '/login',\n            condition: !!authToken,\n            replacement: (\n              <UserIcon\n                Actions={[\n                  { name: 'Dashboard', act: () => {} },\n                  { name: 'Logout', act: Logout }\n                ]}\n                Letter={authToken ? authToken.userName[0] : null}\n              />\n            )\n          }\n        ]}\n      />\n      <div> This is the dashboard </div>;\n    </>\n  );\n};\n\nexport default Dashboard;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var _s = $RefreshSig$();\n\nvar __jsx = React.createElement;\nimport React from 'react';\nimport { useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\nimport UserIcon from '../components/UserIcon';\n\nvar Dashboard = function Dashboard() {\n  _s();\n\n  var authToken = useSelector(authSelectors.selectAuthToken);\n  return __jsx(React.Fragment, null, __jsx(Navigation, {\n    Title: \"URL-shortener\",\n    Links: [{\n      title: 'Login',\n      ref: '/login',\n      condition: !!authToken,\n      replacement: __jsx(UserIcon, {\n        Actions: [{\n          name: 'Dashboard',\n          act: function act() {}\n        }, {\n          name: 'Logout',\n          act: Logout\n        }],\n        Letter: authToken ? authToken.userName[0] : null\n      })\n    }]\n  }), __jsx(\"div\", null, \" This is the dashboard \"), \";\");\n};\n\n_s(Dashboard, \"4nbP1NPoVN+NqRqUhW7/mqHfHlg=\", false, function () {\n  return [useSelector];\n});\n\n_c = Dashboard;\nexport default Dashboard;\n\nvar _c;\n\n$RefreshReg$(_c, \"Dashboard\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/pages/dashboard.js"
+    ],
+    "names": [
+      "React",
+      "useSelector",
+      "Navigation",
+      "authSelectors",
+      "UserIcon",
+      "Dashboard",
+      "authToken",
+      "selectAuthToken",
+      "title",
+      "ref",
+      "condition",
+      "replacement",
+      "name",
+      "act",
+      "Logout",
+      "userName"
+    ],
+    "mappings": ";;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,WAAT,QAA4B,aAA5B;AACA,OAAOC,UAAP,MAAuB,0BAAvB;AACA,SAASC,aAAT,QAA8B,oBAA9B;AACA,OAAOC,QAAP,MAAqB,wBAArB;;AAEA,IAAMC,SAAS,GAAG,SAAZA,SAAY,GAAM;AAAA;;AACtB,MAAMC,SAAS,GAAGL,WAAW,CAACE,aAAa,CAACI,eAAf,CAA7B;AACA,SACE,4BACE,MAAC,UAAD;AACE,IAAA,KAAK,EAAC,eADR;AAEE,IAAA,KAAK,EAAE,CACL;AACEC,MAAAA,KAAK,EAAE,OADT;AAEEC,MAAAA,GAAG,EAAE,QAFP;AAGEC,MAAAA,SAAS,EAAE,CAAC,CAACJ,SAHf;AAIEK,MAAAA,WAAW,EACT,MAAC,QAAD;AACE,QAAA,OAAO,EAAE,CACP;AAAEC,UAAAA,IAAI,EAAE,WAAR;AAAqBC,UAAAA,GAAG,EAAE,eAAM,CAAE;AAAlC,SADO,EAEP;AAAED,UAAAA,IAAI,EAAE,QAAR;AAAkBC,UAAAA,GAAG,EAAEC;AAAvB,SAFO,CADX;AAKE,QAAA,MAAM,EAAER,SAAS,GAAGA,SAAS,CAACS,QAAV,CAAmB,CAAnB,CAAH,GAA2B;AAL9C;AALJ,KADK;AAFT,IADF,EAoBE,6CApBF,MADF;AAwBD,CA1BD;;GAAMV,S;UACcJ,W;;;KADdI,S;AA4BN,eAAeA,SAAf",
+    "sourcesContent": [
+      "import React from 'react';\nimport { useSelector } from 'react-redux';\nimport Navigation from '../components/Navigation';\nimport { authSelectors } from '../store/selectors';\nimport UserIcon from '../components/UserIcon';\n\nconst Dashboard = () => {\n  const authToken = useSelector(authSelectors.selectAuthToken);\n  return (\n    <>\n      <Navigation\n        Title=\"URL-shortener\"\n        Links={[\n          {\n            title: 'Login',\n            ref: '/login',\n            condition: !!authToken,\n            replacement: (\n              <UserIcon\n                Actions={[\n                  { name: 'Dashboard', act: () => {} },\n                  { name: 'Logout', act: Logout }\n                ]}\n                Letter={authToken ? authToken.userName[0] : null}\n              />\n            )\n          }\n        ]}\n      />\n      <div> This is the dashboard </div>;\n    </>\n  );\n};\n\nexport default Dashboard;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

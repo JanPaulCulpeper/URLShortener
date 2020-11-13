@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
+import { ToastContainer, toast } from 'react-toastify';
 import Navigation from '../components/Navigation';
 import Form from '../components/Form';
 import { authSelectors } from '../store/selectors';
@@ -11,6 +12,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const [values, setValues] = React.useState({});
   const authToken = useSelector(authSelectors.selectAuthToken);
+  const authError = useSelector(authSelectors.selectError);
   const { email, password } = values;
 
   const onLogin = React.useCallback(() => {
@@ -24,10 +26,17 @@ const Login = () => {
 
   React.useEffect(() => {
     if (authToken) router.push('/');
-  }, [authToken]);
+    if (authError) {
+      Object.keys(authError).map(
+        (key) => authError[key] && toast(authError[key], { type: 'error' })
+      );
+      dispatch(authActions.clearError());
+    }
+  }, [authToken, authError]);
 
   return (
     <>
+      <ToastContainer />
       <Navigation
         Title="Login"
         Links={[

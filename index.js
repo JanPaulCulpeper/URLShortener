@@ -47,7 +47,7 @@ app.prepare().then(() => {
 
   // choose where to server locally
   // if the default port is taken then we assign in 5000
-  const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 3000;
 
   // get the environmental variables in our .env file
   dotenv.config();
