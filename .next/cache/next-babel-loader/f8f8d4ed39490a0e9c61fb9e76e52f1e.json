@@ -1,1 +1,7 @@
-{"ast":null,"code":"import { createSelector } from 'reselect';\n\nconst selectAuth = state => state.auth;\n\nexport const selectAuthToken = createSelector(selectAuth, auth => {\n  return auth.authToken;\n});\nexport const selectError = createSelector(selectAuth, auth => {\n  return auth.error;\n});\nexport const selectLoading = createSelector(selectAuth, auth => {\n  return auth.loading;\n});","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { createSelector } from 'reselect';\n\nconst selectAuth = state => state.auth;\n\nexport const selectAuthToken = createSelector(selectAuth, auth => {\n  return auth.authToken;\n});\nexport const selectError = createSelector(selectAuth, auth => {\n  return auth.error;\n});\nexport const selectLoading = createSelector(selectAuth, auth => {\n  return auth.loading;\n});",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

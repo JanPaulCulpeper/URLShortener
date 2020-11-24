@@ -1,1 +1,7 @@
-{"ast":null,"code":"var URL = process.env.production ? '' : 'http://localhost:3000/';\nexport default URL;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "var URL = process.env.production ? '' : 'http://localhost:3000/';\nexport default URL;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

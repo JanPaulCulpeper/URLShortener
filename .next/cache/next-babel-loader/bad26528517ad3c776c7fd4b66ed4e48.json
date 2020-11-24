@@ -1,1 +1,7 @@
-{"ast":null,"code":"export const AUTH = 'AUTH';\nexport const AUTH_ACTION_FAILED = 'AUTH_ACTION_FAILED';\nexport const AUTH_LOADING = 'AUTH_LOADING';","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "export const AUTH = 'AUTH';\nexport const AUTH_ACTION_FAILED = 'AUTH_ACTION_FAILED';\nexport const AUTH_LOADING = 'AUTH_LOADING';",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

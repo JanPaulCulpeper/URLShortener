@@ -1,1 +1,7 @@
-{"ast":null,"code":"import { createStore, applyMiddleware } from 'redux';\nimport reduxThunkMiddleware from 'redux-thunk';\nimport { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';\nimport reducers from '../store/reducers';\nconst store = createStore(reducers, composeWithDevTools(applyMiddleware(reduxThunkMiddleware)));\nexport default store;","map":null,"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import { createStore, applyMiddleware } from 'redux';\nimport reduxThunkMiddleware from 'redux-thunk';\nimport { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';\nimport reducers from '../store/reducers';\nconst store = createStore(reducers, composeWithDevTools(applyMiddleware(reduxThunkMiddleware)));\nexport default store;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}
