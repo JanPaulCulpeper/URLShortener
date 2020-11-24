@@ -21,6 +21,7 @@ const urlReducer = (state = initialState, action) => {
         ...state,
         urls: action.payload,
         loading: false,
+        currentUrl: null,
         error: null
       };
     }
@@ -36,7 +37,7 @@ const urlReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        urls: action.payload,
+        currentUrl: action.payload,
         error: null
       };
     }

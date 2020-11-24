@@ -1,4 +1,5 @@
 import { urlTypes } from './types';
+import URL from '../../constants';
 
 const {
   SHORTEN_ERROR,
@@ -11,13 +12,14 @@ const {
 export const shorten = ({ url, custom }) => async (dispatch) => {
   dispatch({ type: SHORTEN_LOADING });
   try {
-    const res = await fetch('http://localhost:3000/api/url/create', {
+    const res = await fetch(`${URL}api/url/create`, {
       method: 'POST',
       body: JSON.stringify({ url, custom }),
       headers: { 'Content-Type': 'application/json' }
     });
     const data = await res.json();
-    if (res.status === 200)
+
+    if (res.status === 201)
       dispatch({ type: SHORTEN_URL_SUCCESS, payload: data });
     else {
       dispatch({ type: SHORTEN_ERROR, payload: data });
@@ -31,7 +33,7 @@ export const fetchUrls = () => async (dispatch) => {
   dispatch({ type: SHORTEN_LOADING });
 
   try {
-    const res = await fetch('http://localhost:3000/api/url/all');
+    const res = await fetch(`${URL}api/url/all`);
     const data = await res.json();
 
     dispatch({ type: FETCH_URLS_SUCCESS, payload: data });
@@ -44,7 +46,7 @@ export const deleteUrl = (key) => async (dispatch) => {
   dispatch({ type: SHORTEN_LOADING });
 
   try {
-    const res = await fetch('http://localhost:3000/api/url/delete', {
+    const res = await fetch(`${URL}api/url/delete`, {
       method: 'POST',
       body: JSON.stringify({ key }),
       headers: { 'Content-Type': 'application/json' }

@@ -13,8 +13,11 @@ const Home = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const authToken = useSelector(authSelectors.selectAuthToken);
-  const urls = useSelector(urlSelectors.selectUrls);
-  const [values, setValues] = React.useState({});
+  const currentUrl = useSelector(urlSelectors.selectCurrentUrl);
+  const [values, setValues] = React.useState({
+    url: '',
+    custom: ''
+  });
   const { url, custom } = values;
   const [current, setCurrent] = React.useState(null);
   const loading = useSelector(authSelectors.selectLoading);
@@ -25,12 +28,14 @@ const Home = () => {
       e.preventDefault();
       setCurrent(custom);
       if (authToken) {
-        dispatch(
-          urlActions.shorten({
-            custom,
-            url
-          })
-        );
+        if (url !== '' && custom !== '') {
+          dispatch(
+            urlActions.shorten({
+              custom,
+              url
+            })
+          );
+        } else toast('Cannot have empty fields!', { type: 'error' });
       }
     },
     [values, current]
@@ -87,13 +92,13 @@ const Home = () => {
               }
             ]}
             LowerText={{
-              info: urls
+              info: currentUrl
                 ? null
                 : `${URL}${values.custom || 'your custom path'}`,
               link: authToken
                 ? {
-                    name: urls ? `${URL}${current}` : null,
-                    ref: urls ? `${URL}${current}` : null
+                    name: currentUrl ? `${URL}${current}` : null,
+                    ref: currentUrl ? `${URL}${current}` : null
                   }
                 : {}
             }}
