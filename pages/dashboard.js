@@ -62,7 +62,9 @@ const Dashboard = () => {
     Fetch();
   }, []);
 
-  if (!loading && !authToken) router.push('/login');
+  React.useEffect(() => {
+    if (!loading && !authToken) router.push('/login');
+  }, []);
   return (
     <>
       {authToken ? (
