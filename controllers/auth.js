@@ -32,9 +32,15 @@ const createToken = (id) => {
 };
 
 const signupPost = async (req, res) => {
-  const { email, password, userName } = req.body;
+  const { email, password, userName, cpassword } = req.body;
 
   try {
+    if (password !== cpassword)
+      res
+        .status(400)
+        .json({ errors: { password: 'Passwords do not match!' } })
+        .end();
+
     const user = await User.create({ email, password, userName });
     const token = createToken(user._id);
     res.cookie('urlshort', token, { httpOnly: true, maxAge: maxAge * 1000 });

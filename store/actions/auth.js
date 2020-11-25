@@ -37,12 +37,12 @@ export const login = (credentials) => async (dispatch) => {
   }
 };
 // export const logouot = () => (dispatch, getState) => {};
-export const signup = ({ email, password, userName }) => async (dispatch) => {
+export const signup = (credentials) => async (dispatch) => {
   dispatch({ type: AUTH_LOADING });
   try {
     const res = await fetch(`${URL}api/auth/signup`, {
       method: 'POST',
-      body: JSON.stringify({ email, password, userName }),
+      body: JSON.stringify(credentials),
       headers: { 'Content-Type': 'application/json' }
     });
     const data = await res.json();

@@ -5,7 +5,8 @@ const {
   SHORTEN_LOADING,
   SHORTEN_URL_SUCCESS,
   FETCH_URLS_SUCCESS,
-  DELETE_URL_SUCCESS
+  DELETE_URL_SUCCESS,
+  CLEAR
 } = urlTypes;
 
 const initialState = {
@@ -16,6 +17,13 @@ const initialState = {
 
 const urlReducer = (state = initialState, action) => {
   switch (action.type) {
+    case CLEAR: {
+      return {
+        ...state,
+        error: null,
+        currentUrl: null
+      };
+    }
     case DELETE_URL_SUCCESS: {
       return {
         ...state,

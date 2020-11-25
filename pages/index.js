@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import Navigation from '../components/Navigation';
 import { authSelectors, urlSelectors } from '../store/selectors';
 import { authActions, urlActions } from '../store/actions';
@@ -14,6 +15,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const authToken = useSelector(authSelectors.selectAuthToken);
   const currentUrl = useSelector(urlSelectors.selectCurrentUrl);
+
   const [values, setValues] = React.useState({
     url: '',
     custom: ''
@@ -28,6 +30,7 @@ const Home = () => {
       e.preventDefault();
       setCurrent(custom);
       if (authToken) {
+        console.log(authToken);
         if (url !== '' && custom !== '') {
           dispatch(
             urlActions.shorten({
@@ -36,6 +39,8 @@ const Home = () => {
             })
           );
         } else toast('Cannot have empty fields!', { type: 'error' });
+      } else {
+        router.push('/login');
       }
     },
     [values, current]
@@ -49,10 +54,24 @@ const Home = () => {
     if (urlError) toast(urlError, { type: 'error' });
   }, [urlError]);
 
+  const clearNotifications = () => {
+    dispatch(urlActions.clear());
+  };
+
+  React.useEffect(() => {
+    if (currentUrl) {
+      toast('Successfuly shortened!', { type: 'success' });
+    }
+  }, [currentUrl]);
+
+  React.useEffect(() => {
+    return () => clearNotifications();
+  }, []);
+
   return (
     <>
-      {!authToken && loading ? (
-        'Loading...'
+      {loading ? (
+        <LinearProgress />
       ) : (
         <>
           <ToastContainer />

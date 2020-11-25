@@ -6,7 +6,8 @@ const {
   SHORTEN_LOADING,
   SHORTEN_URL_SUCCESS,
   FETCH_URLS_SUCCESS,
-  DELETE_URL_SUCCESS
+  DELETE_URL_SUCCESS,
+  CLEAR
 } = urlTypes;
 
 export const shorten = ({ url, custom }) => async (dispatch) => {
@@ -57,4 +58,8 @@ export const deleteUrl = (key) => async (dispatch) => {
   } catch (err) {
     dispatch({ type: SHORTEN_ERROR, payload: err });
   }
+};
+
+export const clear = () => (dispatch) => {
+  dispatch({ type: CLEAR });
 };

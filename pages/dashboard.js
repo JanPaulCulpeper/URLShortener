@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import {
   Card,
   CardContent,
@@ -9,10 +10,11 @@ import {
   Button
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import blue from '@material-ui/core/colors/blue';
 import orange from '@material-ui/core/colors/orange';
 import { useRouter } from 'next/router';
+import URL from '../constants';
 import Navigation from '../components/Navigation';
 import { authSelectors, urlSelectors } from '../store/selectors';
 import { authActions, urlActions } from '../store/actions';
@@ -63,8 +65,8 @@ const Dashboard = () => {
   }, []);
 
   React.useEffect(() => {
-    if (!loading && !authToken) router.push('/login');
-  }, []);
+    if (!authToken && !loading) router.push('/login');
+  }, [authToken]);
   return (
     <>
       {authToken ? (
@@ -103,14 +105,15 @@ const Dashboard = () => {
               <CardContent>
                 <Typography variant="h4">History</Typography>
                 {Object.keys(urls || {}).map((key) => (
-                  <Container className={classes.container}>
-                    <Typography key={key}>{key}</Typography>
+                  <Container key={key} className={classes.container}>
                     <Grid container direction="row">
-                      <SubdirectoryArrowRightIcon />
+                      <a href={urls[key]} className={classes.ref}>
+                        <Typography>{`${URL}${key}`}</Typography>
+                      </a>
+
+                      <ArrowRightAltIcon />
                       <div className={classes.link}>
-                        <a className={classes.ref} href={urls[key]}>
-                          {urls[key]}
-                        </a>
+                        <Typography>{urls[key]}</Typography>
                       </div>
                       <Button
                         size="small"
@@ -130,7 +133,7 @@ const Dashboard = () => {
           </Container>{' '}
         </>
       ) : (
-        'Loading...'
+        <LinearProgress />
       )}
     </>
   );

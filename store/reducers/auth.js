@@ -5,7 +5,7 @@ const { AUTH_ACTION_FAILED, AUTH, AUTH_LOADING } = authTypes;
 const initialState = {
   error: null,
   authToken: null,
-  loading: false
+  loading: true
 };
 
 const authReducer = (state = initialState, action) => {
