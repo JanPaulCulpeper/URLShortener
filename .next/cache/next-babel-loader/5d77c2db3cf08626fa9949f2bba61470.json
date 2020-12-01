@@ -1,1 +1,17 @@
-{"ast":null,"code":"const URL = false ? 'https://url-shortener-teamj.herokuapp.com/' : 'http://localhost:3000/';\nexport default URL;","map":{"version":3,"sources":["/home/luisfcaro/programming/semester-project-team-j/constants.js"],"names":["URL"],"mappings":"AAAA,MAAMA,GAAG,GACP,QACI,4CADJ,GAEI,wBAHN;AAIA,eAAeA,GAAf","sourcesContent":["const URL =\n  process.env.NODE_ENV === 'production'\n    ? 'https://url-shortener-teamj.herokuapp.com/'\n    : 'http://localhost:3000/';\nexport default URL;\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "const URL = false ? 'https://url-shortener-teamj.herokuapp.com/' : 'http://localhost:3000/';\nexport default URL;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/luisfcaro/programming/semester-project-team-j/constants.js"
+    ],
+    "names": ["URL"],
+    "mappings": "AAAA,MAAMA,GAAG,GACP,QACI,4CADJ,GAEI,wBAHN;AAIA,eAAeA,GAAf",
+    "sourcesContent": [
+      "const URL =\n  process.env.NODE_ENV === 'production'\n    ? 'https://url-shortener-teamj.herokuapp.com/'\n    : 'http://localhost:3000/';\nexport default URL;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
